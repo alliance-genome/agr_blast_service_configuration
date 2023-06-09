@@ -27,7 +27,7 @@ for data_provider in global_config["data_providers"]:
         print("Validating environment: " + environment)
         config_filename = ".".join(["databases", data_provider_name, environment, "json"])
         config_filepath = "/".join(["conf", data_provider_name, config_filename])
-        print("Looking for config fiel here: " + config_filepath)
+        print("Looking for config file here: " + config_filepath)
 
 
         fh_blast_config = open(config_filepath, "r")
