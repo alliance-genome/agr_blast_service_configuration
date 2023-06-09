@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/GlobalConfig",
+    "definitions": {
+        "GlobalConfig": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "data_providers": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/DataProvider"
+                    }
+                }
+            },
+            "required": [
+                "data_providers"
+            ],
+            "title": "Global Config"
+        },
+        "DataProvider": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string",
+		    "enum": [
+			    "WB",
+			    "SGD",
+			    "XB",
+			    "FB"
+		    ]
+                },
+                "environments": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "environments",
+                "name"
+            ],
+            "title": "DataProvider"
+        }
+    }
+}
+

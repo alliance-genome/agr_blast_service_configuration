@@ -1,0 +1,213 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$ref": "#/definitions/AgrBlastDatabases",
+	"definitions": {
+		"AgrBlastDatabases": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"data": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/Data"
+					}
+				},
+				"metadata": {
+					"$ref": "#/definitions/MetaData"
+				}
+			},
+			"required": [
+				"data",
+				"metadata"
+			],
+			"title": "AGR Blast Databases"
+		},
+		"MetaData": {
+			"title": "Metadata",
+			"description": "Top level Alliance BLAST database metadata section.",
+			"additionalProperties": false,
+			"properties": {
+				"contact": {
+					"format": "email",
+					"title": "Contact",
+					"type": "string"
+				},
+				"homepage_url": {
+					"type": "string",
+					"format": "uri",
+					"qt-uri-protocols": [
+						"https"
+					]
+				},
+				"logo_url": {
+					"type": "string",
+					"format": "uri",
+					"qt-uri-protocols": [
+						"https",
+						"http"
+					],
+					"qt-uri-extensions": [
+						".svg",
+						".png"
+					]
+				},
+				"dataProvider": {
+					"title": "Dataprovider",
+					"type": "string"
+				},
+				"dateProduced": {
+					"default": "2022-04-22T15:27:48.853248",
+					"format": "date-time",
+					"title": "Dateproduced",
+					"type": "string"
+				},
+				"release": {
+					"title": "Release",
+					"type": "string"
+				}
+			},
+			"required": [
+				"contact",
+				"dataProvider",
+				"dateProduced",
+				"homepage_url",
+				"logo_url",
+				"release"
+			],
+			"additionalProperties": false,
+			"type": "object"
+		},
+		"Data": {
+			"description": "BLAST database metadata.",
+			"additionalProperties": false,
+			"properties": {
+				"uri": {
+					"format": "uri",
+					"maxLength": 65536,
+					"minLength": 1,
+					"title": "Uri",
+					"type": "string"
+				},
+				"bioproject": {
+					"title": "Bioproject",
+					"type": ["string", "null"]
+				},
+				"blast_title": {
+					"title": "Blast Title",
+					"type": "string"
+				},
+				"description": {
+					"title": "Description",
+					"type": "string"
+				},
+				"genus": {
+					"title": "Genus",
+					"type": "string"
+				},
+				"md5sum": {
+					"title": "Md5Sum",
+					"type": "string"
+				},
+				"seqtype": {
+					"allOf": [
+						{
+							"$ref": "#/definitions/BlastDBType"
+						}
+					],
+					"default": "nucl"
+				},
+				"species": {
+					"title": "Species",
+					"type": "string"
+				},
+				"taxon_id": {
+					"title": "Taxon Id",
+					"type": "string"
+				},
+				"version": {
+					"title": "Version",
+					"type": "string"
+				},
+				"genome_browser": {
+					"$ref": "#/definitions/GenomeBrowser"
+				}
+			},
+			"required": [
+				"uri",
+				"blast_title",
+				"description",
+				"genus",
+				"species",
+				"md5sum",
+				"taxon_id",
+				"version"
+			],
+			"title": "sequence metadata",
+			"type": "object"
+		},
+		"GenomeBrowser": {
+			"additionalProperties": false,
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"browser_type": {
+					"title": "genome browse type",
+					"type": "string",
+					"enum": [
+						"jbrowse",
+						"jbrowse2"
+					]
+				},
+				"assembly": {
+					"type": "string"
+				},
+				"url": {
+					"type": "string",
+					"format": "uri",
+					"qt-uri-protocols": [
+						"https"
+					],
+					"qt-uri-extensions": [
+						".html"
+					]
+				},
+				"tracks": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"gene_track": {
+					"type": "string"
+				},
+				"data_url": {
+					"type": "string",
+					"format": "uri",
+					"qt-uri-protocols": [
+						"https"
+					]
+				}
+			},
+			"required": [
+				"assembly",
+				"data_url",
+				"gene_track",
+				"tracks",
+				"browser_type",
+				"url"
+			],
+			"title": "GenomeBrowser"
+		},
+		"BlastDBType": {
+			"description": "NCBI types for BLAST databases.Taken from the dbtype flag of the makeblastdb command line tool.",
+			"additionalProperties": false,
+			"enum": [
+				"nucl",
+				"prot"
+			],
+			"title": "BlastDBType",
+			"type": "string"
+
+		}
+	}
+}

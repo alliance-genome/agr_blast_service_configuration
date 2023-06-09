@@ -1,0 +1,14 @@
+data_providers:
+  - name: "WB"
+    environments:
+      - "WS285"
+      - "WS286"
+  - name: "FB"
+    environments:
+      - "FB2022_04"
+  - name: "SGD"
+    environments:
+      - "2022-06-22"
+  - name: "XB"
+    environments:
+      - "5.5.1"
