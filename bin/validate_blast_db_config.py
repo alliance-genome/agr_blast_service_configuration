@@ -6,7 +6,11 @@ import yaml
 from jsonschema import validate
 
 
-if __name__ == '__main__':
+def validate_blast_config():
+    """
+    Validate the blast config files
+    :return:
+    """
 
     fh_global_config = open("conf/global.yaml", "r")
     fh_global_schema = open("schemas/global_schema.json", "r")
@@ -41,3 +45,8 @@ if __name__ == '__main__':
             else:
                 print("Not Valid")
                 exit(1)
+
+
+if __name__ == '__main__':
+
+    validate_blast_config()
