@@ -1,8 +1,8 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 
 import json
-import yaml
 
+import yaml
 from jsonschema import validate
 
 
@@ -31,7 +31,9 @@ def validate_blast_config():
         data_provider_name = data_provider["name"]
         for environment in data_provider["environments"]:
             print(f"Validating environment: {environment}")
-            config_filename = ".".join(["databases", data_provider_name, environment, "json"])
+            config_filename = ".".join(
+                ["databases", data_provider_name, environment, "json"]
+            )
             config_filepath = "/".join(["conf", data_provider_name, config_filename])
             print(f"Looking for config file here: {config_filepath}")
 
@@ -47,6 +49,5 @@ def validate_blast_config():
                 exit(1)
 
 
-if __name__ == '__main__':
-
+if __name__ == "__main__":
     validate_blast_config()
