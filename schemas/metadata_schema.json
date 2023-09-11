@@ -92,6 +92,10 @@
 					"title": "Bioproject",
 					"type": ["string", "null"]
 				},
+				"seqcol_type": {
+					"title": "Sequence Collection type. This will be used for organizing the databases instead of using the species and genus.",
+					"type": ["string", "null"]
+				},
 				"blast_title": {
 					"title": "Blast Title",
 					"type": "string"
