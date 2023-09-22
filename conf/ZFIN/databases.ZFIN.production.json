@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "uri": "https://zfin.org/downloads/archive/2023.09.21/crispr_fasta.fa",
+      "bioproject": "???",
+      "blast_title": "ZFIN CRISPR Sequences",
+      "description": "ZFIN CRISPR Sequences",
+      "genus": "Danio",
+      "md5sum": "294443a0c3afc5bab1e3ea09713ad2ac",
+      "seqtype": "nucl",
+      "species": "rerio",
+      "taxon_id": "NCBITaxon:7955",
+      "version": "production"
+    }
+  ],
+  "metadata": {
+    "contact": "zfinadmn@zfin.org",
+    "homepage_url": "https://zfin.org",
+    "logo_url": "https://zfin.org/images/zfinlogo_lg.gif",
+    "dataProvider": "ZFIN",
+    "dateProduced": "2023-09-22T16:26:42+01:00",
+    "release": "production"
+  }
+}

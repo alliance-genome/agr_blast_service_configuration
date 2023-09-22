@@ -28,7 +28,8 @@
 			    "WB",
 			    "SGD",
 			    "XB",
-			    "FB"
+			    "FB",
+			    "ZFIN"
 		    ]
                 },
                 "environments": {
