@@ -11,6 +11,18 @@
       "species": "rerio",
       "taxon_id": "NCBITaxon:7955",
       "version": "production"
+    },
+    {
+      "uri": "https://zfin.org/downloads/archive/2023.09.21/talen_fasta.fa",
+      "bioproject": "???",
+      "blast_title": "ZFIN TALEN Sequences",
+      "description": "ZFIN TALEN Sequences",
+      "genus": "Danio",
+      "md5sum": "cfe67fd06a37f4c21a71701fcd3ac2e4",
+      "seqtype": "nucl",
+      "species": "rerio",
+      "taxon_id": "NCBITaxon:7955",
+      "version": "production"
     }
   ],
   "metadata": {
