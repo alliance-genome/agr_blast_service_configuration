@@ -154,7 +154,7 @@
 			"type": "object",
 			"additionalProperties": false,
 			"properties": {
-				"browser_type": {
+				"type": {
 					"title": "genome browse type",
 					"type": "string",
 					"enum": [
@@ -184,6 +184,9 @@
 				"gene_track": {
 					"type": "string"
 				},
+				"mod_gene_url": {
+					"type": "string"
+				},
 				"data_url": {
 					"type": "string",
 					"format": "uri",
@@ -197,8 +200,9 @@
 				"data_url",
 				"gene_track",
 				"tracks",
-				"browser_type",
-				"url"
+				"type",
+				"url",
+				"mod_gene_url"
 			],
 			"title": "GenomeBrowser"
 		},
