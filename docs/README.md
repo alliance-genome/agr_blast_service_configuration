@@ -1,6 +1,3 @@
-Sure, here's the documentation in Markdown format:
-
-```markdown
 # Creating a JSON Configuration File for Blast Service
 
 The JSON configuration file for the Blast service consists of two main sections: `data` and `metadata`.
@@ -60,6 +57,4 @@ Here is an example of a JSON configuration file:
   }
 }
 ```
-
-Please replace the `...` in the `data` array with additional data source objects as needed.
-```
+![Alternative text for image](agr_blast_config_json.png)
