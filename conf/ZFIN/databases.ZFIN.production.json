@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "uri": "https://zfin.org/downloads/archive/2023.09.21/crispr_fasta.fa",
+      "uri": "https://zfin.org/downloads/crispr_fasta.fa",
       "bioproject": "???",
       "blast_title": "ZFIN CRISPR Sequences",
       "description": "ZFIN CRISPR Sequences",
@@ -13,7 +13,7 @@
       "version": "production"
     },
     {
-      "uri": "https://zfin.org/downloads/archive/2023.09.21/talen_fasta.fa",
+      "uri": "https://zfin.org/downloads/talen_fasta.fa",
       "bioproject": "???",
       "blast_title": "ZFIN TALEN Sequences",
       "description": "ZFIN TALEN Sequences",
