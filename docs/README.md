@@ -2,17 +2,17 @@
 
 The JSON configuration file for the Blast service consists of two main sections: `data` and `metadata`.
 
-The `data` section contains an array of objects, each representing a data source from nucleotide 
+The `data` section contains an array of objects, each representing a data source from nucleotide
 or protein sequences. The corresponding FASTA files in each element can be single or multiple sequences, from
 a single species/genome/proteome or DNA/protein related to a certain biological context.
 
-The `metadata` section contains information about the data provider and the release version of the data. 
+The `metadata` section contains information about the data provider and the release version of the data.
 
 Each object should have the following properties:
 
 ## Data Section
 
-The `data` section is an array of objects, each representing a data source. Each object should have 
+The `data` section is an array of objects, each representing a data source. Each object should have
 the following properties (gaphical example below):
 
 - `uri`: The URI where the data source can be accessed. Usually a FTP link. **Required**.
@@ -21,7 +21,7 @@ the following properties (gaphical example below):
 - `description`: A description of the data source.
 - `genus`: The genus of the organism associated with the data source. **Required**.
 - `md5sum`: The MD5 checksum of the data source file, used to check the downloaded file integrity. **Required**.
-- `seqtype`: The type of sequences in the data source (e.g., "nucl" for nucleotide sequences, 
+- `seqtype`: The type of sequences in the data source (e.g., "nucl" for nucleotide sequences,
 - "prot" for protein sequences). **Required**.
 - `species`: The species of the organism associated with the data source. **Required**.
 - `taxon_id`: The NCBI taxon ID of the organism associated with the data source, also used on makeblastdb. **Required**.
@@ -32,7 +32,7 @@ the following properties (gaphical example below):
 The `metadata` section is an object that should have the following properties:
 
 - `contact`: The contact information for the data provider.
-- `homepage_url`: The URL of the data provider's homepage, used on the Sequence Server page to link to the MOD/Alliance page 
+- `homepage_url`: The URL of the data provider's homepage, used on the Sequence Server page to link to the MOD/Alliance page
 - `logo_url`: The URL of the data provider's logo, also used on the main page.
 - `dataProvider`: The name of the data provider.
 - `dateProduced`: The date when the data was produced.
@@ -74,7 +74,7 @@ Here is an example of a JSON configuration file:
 ## JBrowse track links
 
 The JBrowse track links are used to display the data sources in the JBrowse instance.
-This section is not required, albeit useful, but it is used to populate links in the Sequence Server blast results 
+This section is not required, albeit useful, but it is used to populate links in the Sequence Server blast results
 page to link to specific tracks in JBrowse. Each object should have the following properties:
 
 

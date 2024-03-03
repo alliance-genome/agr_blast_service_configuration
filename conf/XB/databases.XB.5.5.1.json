@@ -23,7 +23,7 @@
          "species" : "tropicalis",
          "taxon_id" : "8364",
          "version" : "XT9.1"
-      }	  
+      }
    ],
    "metadata" : {
       "contact" : "vaneet.lotay@ucalgary.ca",
@@ -34,4 +34,3 @@
       "release" : "XB 5.5.1"
    }
 }
-
