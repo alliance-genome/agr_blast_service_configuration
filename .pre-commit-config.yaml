@@ -1,0 +1,32 @@
+# .pre-commit-config.yaml
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+      - id: check-json
+      - id: check-added-large-files
+  - repo: local
+    hooks:
+      - id: black
+        name: black
+        entry: poetry run black bin
+        language: system
+        types: [file, python]
+      - id: isort
+        name: isort
+        entry: poetry run isort bin
+        language: system
+        types: [file, python]
+      - id: check-blast-dbs
+        name: validate BLAST DB configurations
+        entry: poetry run python bin/validate_blast_db_config.py
+        language: system
+        types: [file, python]
