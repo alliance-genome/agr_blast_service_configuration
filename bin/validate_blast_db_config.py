@@ -70,6 +70,5 @@ def validate_blast_config():
                 exit(1)
 
 
-
 if __name__ == "__main__":
     validate_blast_config()
