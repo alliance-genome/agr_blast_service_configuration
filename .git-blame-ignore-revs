@@ -1,2 +1,5 @@
 # Run this command to always ignore formatting commits in `git blame`
 # git config blame.ignoreRevsFile .git-blame-ignore-revs
+#
+# Changes that were made or requested by the pre-commit hooks
+12c20da46f82a6ef45610b424091eb280877c06f
