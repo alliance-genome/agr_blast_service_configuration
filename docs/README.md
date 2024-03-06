@@ -37,6 +37,7 @@ The `metadata` section is an object that should have the following properties:
 - `dataProvider`: The name of the data provider.
 - `dateProduced`: The date when the data was produced.
 - `release`: The release version of the data.
+- `public`: A boolean value indicating whether the data is displayed or not on the website.
 
 Here is an example of a JSON configuration file:
 
@@ -63,7 +64,8 @@ Here is an example of a JSON configuration file:
     "logo_url": "https://wormbase.org/img/logo/logo_wormbase_gradient.svg",
     "dataProvider": "WB",
     "dateProduced": "2022-08-09T13:08:22+01:00",
-    "release": "WS286"
+    "release": "WS286",
+    "public": true
   }
 }
 ```
