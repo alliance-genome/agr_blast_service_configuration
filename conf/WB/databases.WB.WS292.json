@@ -1136,12 +1136,13 @@
          "version" : "WS292"
       }
    ],
-   "metaData" : {
+   "metadata" : {
       "contact" : "help@wormbase.org",
       "dataProvider" : "WB",
       "dateProduced" : "2024-02-28T16:17:51+00:00",
       "homepage_url" : "https://wormbase.org",
       "logo_url" : "https://wormbase.org/img/logo/logo_wormbase_gradient.svg",
-      "release" : "WS292"
-   }
+      "release" : "WS292",
+      "public": false
+      }
 }
