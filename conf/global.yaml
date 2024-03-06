@@ -1,9 +1,8 @@
 data_providers:
   - name: "WB"
     environments:
-      - "WS285"
-      - "WS286"
       - "WS291"
+      - "WS292"
   - name: "FB"
     environments:
       - "FB2022_04"

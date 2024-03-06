@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "agr_blast_service_configuration"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
 attrs = "^23.1.0"
 jsonschema = "^4.17.3"
 pyrsistent = "^0.19.3"

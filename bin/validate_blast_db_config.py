@@ -43,6 +43,7 @@ def validate_blast_config():
 
     # For each data provider in the global configuration
     for data_provider in global_config["data_providers"]:
+        print(data_provider)
         data_provider_name = data_provider["name"]
         # For each environment of the data provider
         for environment in data_provider["environments"]:
@@ -59,6 +60,7 @@ def validate_blast_config():
             blast_config = json.load(fh_blast_config)
 
             # Validate the configuration against the schema
+            print(f"Validating {config_filename}")
             result = validate(blast_config, schema)
 
             # If the configuration is valid, print a success message

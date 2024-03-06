@@ -64,6 +64,11 @@
 				"release": {
 					"title": "Release",
 					"type": "string"
+				},
+				"public": {
+					"description": "Is this data publicly displayed?",
+					"title": "Public",
+					"type": "boolean"
 				}
 			},
 			"required": [
