@@ -5,7 +5,8 @@ The global.yaml file is used to configure the data providers and their environme
 data_providers is a list where each provider is represented by a dictionary.
 Each dictionary has two keys: "name" and "environments".
 The "name" key represents the name of the provider.
-The "environments" key is a list of the environments available and to be processed for each provider
+The "environments" key is a list of the environments available and to be processed for each provider that will be made
+available in the application web interface
 
 Currently, there are five providers: WB, FB, SGD, XB ad ZFIN
 

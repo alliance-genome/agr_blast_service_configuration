@@ -7,7 +7,7 @@ used to manage the database creation process.
 
 In the bin folder, there is a Python script that validates the JSON configuration files, and it can be used
 directly on manuallya or automatically generated JSON files. The validator also checks the global YAML to find the
-different JSON files and their respective enviropnments.
+different JSON files and their respective environments.
 
 The docs folder contains documentation on how to create  these configuration files, with required fields and structures.
 
