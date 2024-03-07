@@ -1,3 +1,39 @@
+# global.yaml
+
+The global.yaml file is used to configure the data providers and their environments in your application.
+
+data_providers is a list where each provider is represented by a dictionary.
+Each dictionary has two keys: "name" and "environments".
+The "name" key represents the name of the provider.
+The "environments" key is a list of the environments available and to be processed for each provider
+
+Currently, there are five providers: WB, FB, SGD, XB ad ZFIN
+
+WB has two environments: WS291 and WS292 (current production and next release)
+FB has one environment: FB2022_04 (test)
+SGD has one environment: 2022-06-22 (test)
+XB has one environment: 5.5.1 (test)
+
+Currently, the global.yaml file looks like this:
+
+```yaml
+contents:
+    data_providers:
+        - name: "WB"
+          environments:
+            - "WS291"
+            - "WS292"
+        - name: "FB"
+          environments:
+            - "FB2022_04"
+        - name: "SGD"
+          environments:
+            - "2022-06-22"
+        - name: "XB"
+          environments:
+            - "5.5.1"
+```
+
 # Creating a JSON Configuration File for Blast Service
 
 The JSON configuration file for the Blast service consists of two main sections: `data` and `metadata`.
