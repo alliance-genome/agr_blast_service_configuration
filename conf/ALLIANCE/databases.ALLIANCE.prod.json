@@ -1,0 +1,134 @@
+{
+	"data" : [
+		{
+			"bioproject" : "PRJNA13758",
+			"blast_title" : "C. elegans Genome Assembly",
+			"description" : "Caenorhabditis elegans genome assembly",
+			"genome_browser" : {
+				"assembly" : "c_elegans_PRJNA13758",
+				"data_url" : "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/WS292/c_elegans_PRJNA13758/",
+				"gene_track" : "Curated_Genes",
+				"mod_gene_url" : "https://wormbase.org/species/c_elegans/gene/",
+				"tracks" : [
+					"c_elegans_PRJNA13758_curated_genes",
+					"c_elegans_PRJNA13758_protein_motifs",
+					"c_elegans_PRJNA13758_classical_alleles"
+				],
+				"type" : "jbrowse2",
+				"url" : "https://wormbase.org/tools/genome/jbrowse2/index.html"
+			},
+			"genus" : "Caenorhabditis",
+			"md5sum" : "4af7b125bde3c80617ad846cc2ff266e",
+			"seqtype" : "nucl",
+			"species" : "elegans",
+			"taxon_id" : "NCBITaxon:6239",
+			"uri" : "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_000002985.6_WBcel235_genomic.fna.gz",
+			"version" : "WS292"
+		},
+		{
+			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_000002035.6_GRCz11_genomic.fna.gz",
+			"bioproject": "",
+			"blast_title": "ZFIN GRCz11",
+			"description": "ZFIN GCF_000002035.6 GRCz11",
+			"genus": "Danio",
+			"md5sum": "4400bdfa1eb6842bddd52cef73bf0a54",
+			"seqtype": "nucl",
+			"species": "rerio",
+			"taxon_id": "NCBITaxon:7955",
+			"version": "production"
+		},
+	        {
+			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_015227675.2_mRatBN7.2_genomic.fna.gz",
+			"bioproject": "",
+			"blast_title": "RGD mRatBN7.2",
+			"description": "RGD GCF_015227675.2 mRatBN7.2",
+			"genus": "rattus",
+			"md5sum": "b60f66c61a72e92f3908cc7bcb852d6e",
+			"seqtype": "nucl",
+			"species": "norvegicus",
+			"taxon_id": "NCBITaxon:10116",
+			"version": "production"
+		},
+	        {
+			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_000001635.27_GRCm39_genomic.fna.gz",
+			"bioproject": "",
+			"blast_title": "Mouse GRCm39",
+			"description": "GCF_000001635.27_GRCm39",
+			"genus": "mus",
+			"md5sum": "9592cfe265714ec7a793865e8d241939",
+			"seqtype": "nucl",
+			"species": "musculus",
+			"taxon_id": "NCBITaxon:",
+			"version": "production"
+		},
+                {
+			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_000001405.40_GRCh38.p14_genomic.fna.gz",
+			"bioproject": "",
+			"blast_title": "Human GRCh38",
+			"description": "Human GCF_000001405.40 GRCh38",
+			"genus": "homo",
+			"md5sum": "5220bdf9707fb450450e9078965b8177",
+			"seqtype": "nucl",
+			"species": "sapiens",
+			"taxon_id": "NCBITaxon:9506",
+			"version": "production"
+		},
+                {
+			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz",
+			"bioproject": "",
+			"blast_title": "Fly Release_6_plus_ISO1_MT",
+			"description": "Fly GCF_000001215.4 Release_6_plus_ISO1_MT",
+			"genus": "drosophila",
+			"md5sum": "4739b1a44d6dfccb50ea4607b6cfe17c",
+			"seqtype": "nucl",
+			"species": "melanogaster",
+			"taxon_id": "NCBITaxon:7227",
+			"version": "production"
+		},
+                {
+			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_000146045.2_R64_genomic.fna.gz",
+			"bioproject": "",
+			"blast_title": "Yeast R64",
+			"description": "Yeast GCF_000146045.2 R64",
+			"genus": "saccharomyces",
+			"md5sum": "e69d2e0eb1083656e38259f933be3ac0",
+			"seqtype": "nucl",
+			"species": "cerevisiae",
+			"taxon_id": "NCBITaxon:4932",
+			"version": "production"
+		},
+                {
+			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/XENLA_9.2_genome.fa.gz",
+			"bioproject": "",
+			"blast_title": "X laevis. XENLA_9.2",
+			"description": "X laevis. XENLA_9.2",
+			"genus": "xenupus",
+			"md5sum": "ef825d0b3289db3261bab1ebdd13a44b",
+			"seqtype": "nucl",
+			"species": "laevis",
+			"taxon_id": "NCBITaxon:8355",
+			"version": "production"
+		},
+                {
+			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/XENTR_9.1_genome.fa.gz",
+			"bioproject": "",
+			"blast_title": "X tropicalis XENTR_9.1",
+			"description": "X tropicalis XENTR_9.1",
+			"genus": "xenupos",
+			"md5sum": "b581410e1f11bd4ecd23299f62b1405b",
+			"seqtype": "nucl",
+			"species": "tropicalis",
+			"taxon_id": "NCBITaxon:8364",
+			"version": "production"
+		}
+	],
+	"metadata" : {
+		"contact" : "help@alliancegenome.org",
+		"dataProvider" : "ALLIANCE",
+		"dateProduced" : "2024-03-21T16:17:51+00:00",
+		"homepage_url" : "https://alliancegenome.org",
+		"logo_url" : "https://www.alliancegenome.org/static/media/alliance_logo_agr.5d74de29913e6faf4e40.png",
+		"release" : "prod",
+		"public": false
+	}
+}

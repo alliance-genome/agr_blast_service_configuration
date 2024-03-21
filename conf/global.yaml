@@ -12,3 +12,6 @@ data_providers:
   - name: "XB"
     environments:
       - "5.5.1"
+  - name: "ALLIANCE"
+    environments:
+      - "prod"
