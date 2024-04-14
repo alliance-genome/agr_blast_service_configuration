@@ -18,7 +18,7 @@ The pre-commit hooks are configued in [.pre-commit-config.yaml](./pre-commit-con
 
 ### Initial configuration
 
-This only needs to be done once in a repo.
+This only needs to be done once in a local repo.
 
 ```shell
 poetry run pre-commit install
@@ -39,7 +39,7 @@ poetry run pre-commit run --all-files
 
 ## How to create a JSON configuration file
 
-[Follow this simple guid on what is required on a
+[Follow this simple guide on what is required on a
 JSON configuration file](docs/README.md)
 
 ### Executing program

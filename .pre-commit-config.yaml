@@ -29,4 +29,4 @@ repos:
         name: validate BLAST DB configurations
         entry: poetry run python bin/validate_blast_db_config.py
         language: system
-        types: [file, python]
+        types: [file]
