@@ -17,16 +17,17 @@ repos:
     hooks:
       - id: black
         name: black
-        entry: poetry run black bin
+        entry: poetry run black
         language: system
         types: [file, python]
       - id: isort
         name: isort
-        entry: poetry run isort bin
+        entry: poetry run isort
         language: system
         types: [file, python]
       - id: check-blast-dbs
         name: validate BLAST DB configurations
         entry: poetry run python bin/validate_blast_db_config.py
         language: system
-        types: [file]
+        files: ^conf/
+        types: [json]
