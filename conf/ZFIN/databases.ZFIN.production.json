@@ -1,6 +1,18 @@
 {
   "data": [
     {
+      "uri": "https://zfin.org/downloads/ensembl_zf.fa",
+      "bioproject": "???",
+      "blast_title": "Ensembl Transcripts",
+      "description": "Ensembl Transcripts",
+      "genus": "Danio",
+      "md5sum": "46963d257c93d8c9b4ee43ab1cd6c2ca",
+      "seqtype": "nucl",
+      "species": "rerio",
+      "taxon_id": "NCBITaxon:7955",
+      "version": "production"
+    },
+    {
       "uri": "https://zfin.org/downloads/crispr_fasta.fa",
       "bioproject": "???",
       "blast_title": "ZFIN CRISPR Sequences",
