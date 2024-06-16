@@ -15,10 +15,8 @@ jobs:
           path: agr_blast_service_configuration
 
       - name: "Checkout FlyBase BLAST Configuration"
-        uses: actions/checkout@v4
-        with:
-          repository: FlyBase/blast-db-configuration
-          path: flybase-blast-db-configuration
+        run: |
+          git clone https://github.com/FlyBase/blast-db-configuration.git flybase-blast-db-configuration
 
       - name: Copy configuration files
         run: |
