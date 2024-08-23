@@ -25,7 +25,7 @@
       "version": "production"
     },
     {
-      "uri": "https://zfin.org/downloads/loadedFishMircoRNAStemLoop.fa.gz",
+      "uri": "https://zfin.org/downloads/loadedFishMicroRNAStemLoop.fa.gz",
       "bioproject": "???",
       "blast_title": "mirRNA Stem Loop",
       "description": "mirRNA Stem Loop",
