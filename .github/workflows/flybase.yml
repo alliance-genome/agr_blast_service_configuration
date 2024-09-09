@@ -24,7 +24,7 @@ jobs:
           tar cf - *.json | (cd ../../agr_blast_service_configuration/conf/FB/; tar xvBpf -)
 
       - name: Create PR for updated FlyBase conf files
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           add-paths: |
             agr_blast_service_configuration/conf/FB/*.json
