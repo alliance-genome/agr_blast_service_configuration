@@ -6,32 +6,38 @@ on:
         required: true
 
 jobs:
-  update-conf:
+  flybase-update-conf:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+
     steps:
-      - name: "Checkout Alliance BLAST Service Configuration"
-        uses: actions/checkout@v4
-        with:
-          path: agr_blast_service_configuration
+        - name: "Checkout FlyBase BLAST Configuration"
+          uses: actions/checkout@v4
+          with:
+            repository: flybase/blast-db-configuration
+            path: flybase-blast-db-configuration
 
-      - name: "Checkout FlyBase BLAST Configuration"
-        run: |
-          git clone https://github.com/FlyBase/blast-db-configuration.git flybase-blast-db-configuration
+        - name: "Checkout Alliance BLAST Service Configuration"
+          uses: actions/checkout@v4
+          with:
+            path: agr_blast_service_configuration
 
-      - name: Copy configuration files
-        run: |
-          cd flybase-blast-db-configuration/conf && \
-          tar cf - *.json | (cd ../../agr_blast_service_configuration/conf/FB/; tar xvBpf -)
+        - name: "Copy configuration files"
+          run: |
+            cd flybase-blast-db-configuration/conf && \
+            tar cf - *.json | (cd ../../agr_blast_service_configuration/conf/FB/; tar xvBpf -)
 
-      - name: Create PR for updated FlyBase conf files
-        uses: peter-evans/create-pull-request@v7
-        with:
-          add-paths: |
-            agr_blast_service_configuration/conf/FB/*.json
-          commit-message: ${{ github.event.inputs.FB-release }} BLAST config
-          branch: ${{ github.event.inputs.FB-release }}-blast-config-update
-          delete-branch: true
-          title: '[Update] ${{ github.event.inputs.FB-release }} BLAST config'
-          body: |
-            ${{ github.event.inputs.FB-release }} BLAST config
-          draft: false
+        - name: "Create PR for updated FlyBase conf files"
+          uses: peter-evans/create-pull-request@v7
+          with:
+            path: agr_blast_service_configuration
+            add-paths: "conf/FB/*.json"
+            commit-message: ${{ github.event.inputs.FB-release }} BLAST config
+            branch: ${{ github.event.inputs.FB-release }}-blast-config-update
+            title: "[Update] ${{ github.event.inputs.FB-release }} BLAST config"
+            body: |
+              ${{ github.event.inputs.FB-release }} BLAST config
+            delete-branch: true
