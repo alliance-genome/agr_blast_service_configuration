@@ -30,6 +30,11 @@ jobs:
             cd flybase-blast-db-configuration/conf && \
             tar cf - *.json | (cd ../../agr_blast_service_configuration/conf/FB/; tar xvBpf -)
 
+        - name: "Replace release number"
+          run: |
+            cd agr_blast_service_configuration/conf && \
+            perl -pi -e 's/FB\d{4}_\d{2}/${{ github.event.inputs.FB-release }}/' global.yaml
+
         - name: "Create PR for updated FlyBase conf files"
           uses: peter-evans/create-pull-request@v7
           with:
