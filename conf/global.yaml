@@ -5,7 +5,7 @@ data_providers:
       - "WS292"
   - name: "FB"
     environments:
-      - "FB2024_02"
+      - "FB2024_04"
   - name: "SGD"
     environments:
       - "2024-06-13"
