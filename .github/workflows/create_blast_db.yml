@@ -1,0 +1,37 @@
+name: Create BLAST Databases
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+jobs:
+  create-blast-db:
+    if: github.event.pull_request.merged == true
+    runs-on: blast
+
+    steps:
+      - name: Checkout configuration repository
+        uses: actions/checkout@v3
+        with:
+          path: config
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Get changed files
+        id: changed
+        run: |
+          CHANGED_FILE=$(git -C config diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} | grep -E '\.json$' || true)
+          echo "file=$CHANGED_FILE" >> $GITHUB_OUTPUT
+
+      - name: Run BLAST DB creation
+        run: |
+          # Change to the blast manager directory
+          cd /home/ec2-user/gitroot/agr_blastdb_manager
+          
+          # Pull latest changes from manager repo
+          git pull origin main
+          
+          # Run the script with poetry
+          poetry run python src/create_blast_db.py \
+            -j $GITHUB_WORKSPACE/config/${{ steps.changed.outputs.file }} \
+            -u \
+            -e $(basename ${{ steps.changed.outputs.file }} .json | cut -d'.' -f3)
