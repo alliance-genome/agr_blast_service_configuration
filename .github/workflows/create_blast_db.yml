@@ -3,10 +3,16 @@ on:
   pull_request:
     types: [closed]
     branches: [main]
+  workflow_dispatch:
+    inputs:
+      json_file:
+        description: 'Full path to JSON file (e.g., conf/WB/databases.WB.WS296.json)'
+        required: true
+        type: string
 
 jobs:
   create-blast-db:
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
     runs-on: blast
 
     steps:
@@ -16,11 +22,15 @@ jobs:
           path: config
           ref: ${{ github.event.pull_request.head.sha }}
 
-      - name: Get changed files
+      - name: Get file to process
         id: changed
         run: |
-          CHANGED_FILE=$(git -C config diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} | grep -E '\.json$' || true)
-          echo "file=$CHANGED_FILE" >> $GITHUB_OUTPUT
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "file=${{ github.event.inputs.json_file }}" >> $GITHUB_OUTPUT
+          else
+            CHANGED_FILE=$(git -C config diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} | grep -E '\.json$' || true)
+            echo "file=$CHANGED_FILE" >> $GITHUB_OUTPUT
+          fi
 
       - name: Run BLAST DB creation
         run: |
