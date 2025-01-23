@@ -13,8 +13,8 @@ on:
 jobs:
   create-blast-db:
     if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
-    runs-on: blast
-    timeout-minutes: 180
+    runs-on: blast2
+    timeout-minutes: 5
     concurrency: 
       group: blast-${{ github.ref }}
       cancel-in-progress: true
