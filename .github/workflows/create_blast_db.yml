@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       json_file:
-        description: 'Full path to JSON file (e.g., conf/WB/databases.WB.WS296.json)'
+        description: 'Full path to JSON file (e.g., conf/WB/databases.WB.WS295.json)'
         required: true
         type: string
 
@@ -14,6 +14,10 @@ jobs:
   create-blast-db:
     if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
     runs-on: blast
+    timeout-minutes: 180
+    concurrency: 
+      group: blast-${{ github.ref }}
+      cancel-in-progress: true
 
     steps:
       - name: Checkout configuration repository
@@ -21,6 +25,7 @@ jobs:
         with:
           path: config
           ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 2
 
       - name: Get file to process
         id: changed
@@ -29,18 +34,21 @@ jobs:
             echo "file=${{ github.event.inputs.json_file }}" >> $GITHUB_OUTPUT
           else
             CHANGED_FILE=$(git -C config diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} | grep -E '\.json$' || true)
+            if [ -z "$CHANGED_FILE" ]; then
+              echo "No JSON files changed"
+              exit 0
+            fi
             echo "file=$CHANGED_FILE" >> $GITHUB_OUTPUT
           fi
 
       - name: Run BLAST DB creation
         run: |
-          # Change to the blast manager directory
           cd /home/ec2-user/gitroot/agr_blastdb_manager
+          git pull origin main || {
+            echo "Failed to pull latest changes"
+            exit 1
+          }
           
-          # Pull latest changes from manager repo
-          git pull origin main
-          
-          # Run the script with poetry
           poetry run python src/create_blast_db.py \
             -j $GITHUB_WORKSPACE/config/${{ steps.changed.outputs.file }} \
             -u \
