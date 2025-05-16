@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/227/675/GCF_015227675.2_mRatBN7.2/GCF_015227675.2_mRatBN7.2_genomic.fna.gz",
+      "bioproject": "???",
+      "blast_title": "mRatBN7.2",
+      "description": "mRatBN7.2 Rat reference assembly",
+      "genus": "Rattus",
+      "md5sum": "15c0e1d4fc8400a9f54f1bff3670b3aa",
+      "seqtype": "nucl",
+      "species": "norvegicus",
+      "taxon_id": "NCBITaxon:10116",
+      "version": "production"
+    },
+    {
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/323/735/GCF_036323735.1_GRCr8/GCF_036323735.1_GRCr8_genomic.fna.gz",
+      "bioproject": "???",
+      "blast_title": "GRCr8",
+      "description": "GRCr8 Rat reference assembly",
+      "genus": "Rattus",
+      "md5sum": "f7f47214cb2b7987c2edc85b3d3a10c5",
+      "seqtype": "nucl",
+      "species": "norvegicus",
+      "taxon_id": "NCBITaxon:10116",
+      "version": "production"
+    }
+  ],
+  "metadata": {
+    "contact": "rgd.web2@mcw.edu",
+    "homepage_url": "https://rgd.mcw.edu",
+    "logo_url": "https://rgd.mcw.edu/rgdweb/common/images/rgd_logo.jpg",
+    "dataProvider": "RGD",
+    "dateProduced": "2025-05-16T16:26:42+01:00",
+    "release": "production"
+  }
+}
