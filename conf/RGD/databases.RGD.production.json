@@ -1,0 +1,168 @@
+{
+  "data": [
+    {
+      "uri": "https://zfin.org/downloads/ensembl_zf.fa.gz",
+      "bioproject": "???",
+      "blast_title": "Ensembl Transcripts",
+      "description": "Ensembl Transcripts",
+      "genus": "Danio",
+      "md5sum": "46963d257c93d8c9b4ee43ab1cd6c2ca",
+      "seqtype": "nucl",
+      "species": "rerio",
+      "taxon_id": "NCBITaxon:7955",
+      "version": "production"
+    },
+    {
+      "uri": "https://zfin.org/downloads/LoadedMicroRNAStemLoop.fa.gz",
+      "bioproject": "???",
+      "blast_title": "mirRNA Mature",
+      "description": "mirRNA Mature",
+      "genus": "Danio",
+      "md5sum": "12ea6952a3a7d67813680c4db7c78f80",
+      "seqtype": "nucl",
+      "species": "rerio",
+      "taxon_id": "NCBITaxon:7955",
+      "version": "production"
+    },
+    {
+      "uri": "https://zfin.org/downloads/loadedFishMircoRNAStemLoop.fa.gz",
+      "bioproject": "???",
+      "blast_title": "mirRNA Stem Loop",
+      "description": "mirRNA Stem Loop",
+      "genus": "Danio",
+      "md5sum": "cc77629624fc6e80abe5353e59dc1e83",
+      "seqtype": "nucl",
+      "species": "rerio",
+      "taxon_id": "NCBITaxon:7955",
+      "version": "production"
+    },
+    {
+      "uri": "https://zfin.org/downloads/ZFINGenesWithExpression.fa.gz",
+      "bioproject": "???",
+      "blast_title": "ZFIN Genes With Expression",
+      "description": "All ZFIN genes and RNAs with expression data",
+      "genus": "Danio",
+      "md5sum": "ce82075dd3da95c3ad222f24f625ef4b",
+      "seqtype": "nucl",
+      "species": "rerio",
+      "taxon_id": "NCBITaxon:7955",
+      "version": "production"
+    },
+    {
+      "uri": "https://zfin.org/downloads/crispr_fasta.fa.gz",
+      "bioproject": "???",
+      "blast_title": "ZFIN CRISPR Sequences",
+      "description": "ZFIN CRISPR Sequences",
+      "genus": "Danio",
+      "md5sum": "82ce59ac5d63a02d7567084f78b8cff3",
+      "seqtype": "nucl",
+      "species": "rerio",
+      "taxon_id": "NCBITaxon:7955",
+      "version": "production"
+    },
+    {
+      "uri": "https://zfin.org/downloads/talen_fasta.fa.gz",
+      "bioproject": "???",
+      "blast_title": "ZFIN TALEN Sequences",
+      "description": "ZFIN TALEN Sequences",
+      "genus": "Danio",
+      "md5sum": "120d600be831a50d460872eb6f5e4d7c",
+      "seqtype": "nucl",
+      "species": "rerio",
+      "taxon_id": "NCBITaxon:7955",
+      "version": "production"
+    },
+    {
+      "uri": "https://zfin.org/downloads/zfin_mrph.fa.gz",
+      "bioproject": "???",
+      "blast_title": "ZFIN TALEN Sequences",
+      "description": "ZFIN TALEN Sequences",
+      "genus": "Danio",
+      "md5sum": "120d600be831a50d460872eb6f5e4d7c",
+      "seqtype": "nucl",
+      "species": "rerio",
+      "taxon_id": "NCBITaxon:7955",
+      "version": "production"
+    },
+    {
+      "uri": "https://zfin.org/downloads/zfin_cdna_seq.fa.gz",
+      "bioproject": "???",
+      "blast_title": "ZFIN cDNA Sequences",
+      "description": "ZFIN cDNA Sequences",
+      "genus": "Danio",
+      "md5sum": "120d600be831a50d460872eb6f5e4d7c",
+      "seqtype": "nucl",
+      "species": "rerio",
+      "taxon_id": "NCBITaxon:7955",
+      "version": "production"
+    },
+    {
+      "uri": "https://zfin.org/downloads/vega_transcript.fa.gz",
+      "bioproject": "???",
+      "blast_title": "VEGA Transcript",
+      "description": "VEGA Transcript",
+      "genus": "Danio",
+      "md5sum": "120d600be831a50d460872eb6f5e4d7c",
+      "seqtype": "nucl",
+      "species": "rerio",
+      "taxon_id": "NCBITaxon:7955",
+      "version": "production"
+    },
+    {
+      "uri": "https://zfin.org/downloads/vega_withdrawn.fa.gz",
+      "bioproject": "???",
+      "blast_title": "VEGA Withdrawn",
+      "description": "VEGA Withdrawn",
+      "genus": "Danio",
+      "md5sum": "120d600be831a50d460872eb6f5e4d7c",
+      "seqtype": "nucl",
+      "species": "rerio",
+      "taxon_id": "NCBITaxon:7955",
+      "version": "production"
+    },
+    {
+      "uri": "https://zfin.org/downloads/publishedProtein.fa.gz",
+      "bioproject": "???",
+      "blast_title": "Published Zebrafish Proteins",
+      "description": "Protein sequences published in papers and entered into ZFIN by ZFIN curators. These sequences can not be found via an accession number at GenBank.",
+      "genus": "Danio",
+      "md5sum": "120d600be831a50d460872eb6f5e4d7c",
+      "seqtype": "nucl",
+      "species": "rerio",
+      "taxon_id": "NCBITaxon:7955",
+      "version": "production"
+    },
+    {
+      "uri": "https://zfin.org/downloads/gbk_est_zf.fa.gz",
+      "bioproject": "???",
+      "blast_title": "EST Zebrafish",
+      "description": "Subset of GenBank that contains zebrafish sequences from EST division. Zebrafish sequences are parsed from the EST divisions by examining the organism lines for entries",
+      "genus": "Danio",
+      "md5sum": "120d600be831a50d460872eb6f5e4d7c",
+      "seqtype": "nucl",
+      "species": "rerio",
+      "taxon_id": "NCBITaxon:7955",
+      "version": "production"
+    },
+    {
+      "uri": "https://zfin.org/downloads/gbk_zf_mrna.fa.gz",
+      "bioproject": "???",
+      "blast_title": "GenBank Zebrafish mRNA",
+      "description": "All GenBank mRNA sequences.",
+      "genus": "Danio",
+      "md5sum": "120d600be831a50d460872eb6f5e4d7c",
+      "seqtype": "nucl",
+      "species": "rerio",
+      "taxon_id": "NCBITaxon:7955",
+      "version": "production"
+    }
+  ],
+  "metadata": {
+    "contact": "zfinadmn@zfin.org",
+    "homepage_url": "https://zfin.org",
+    "logo_url": "https://zfin.org/images/zfinlogo_lg.gif",
+    "dataProvider": "ZFIN",
+    "dateProduced": "2023-09-22T16:26:42+01:00",
+    "release": "production"
+  }
+}
