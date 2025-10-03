@@ -81,7 +81,7 @@
       "blast_title": "RNA coding + introns",
       "description": "S288C reference RNA genomic sequences",
       "genus": "S288C Reference (DNA/RNA/Vector)",
-      "species": "Non-coding RNA (ncRNA)",
+      "species": "RNA",
       "md5sum": "90d9181b8854ecc97cfa5ebf4d2e0bad",
       "seqtype": "nucl",
       "taxon_id": "559292",
@@ -92,7 +92,7 @@
       "blast_title": "RNA coding",
       "description": "S288C reference RNA coding sequences",
       "genus": "S288C Reference (DNA/RNA/Vector)",
-      "species": "Non-coding RNA (ncRNA)",
+      "species": "RNA",
       "md5sum": "3879cabe2b1ba43f9e5f72df766bacec",
       "seqtype": "nucl",
       "taxon_id": "559292",
@@ -103,7 +103,7 @@
       "blast_title": "RNA + 1000 bp upstream/downstream",
       "description": "S288C reference RNA genomic sequences +/- 1kb",
       "genus": "S288C Reference (DNA/RNA/Vector)",
-      "species": "Non-coding RNA (ncRNA)",
+      "species": "RNA",
       "md5sum": "b97a24ca4e238de18311cab983a96d88",
       "seqtype": "nucl",
       "taxon_id": "559292",
@@ -432,7 +432,7 @@
     {
       "blast_title": "CEN.PK2-1Ca (SGD) strain contig genomic sequences",
       "description": "CEN.PK2-1Ca (SGD) strain contig genomic sequences",
-      "genus": "Other Strains – Genomic DNA",
+      "genus": "Alternative Reference Strains - Genomic DNA",
       "species": "CEN.PK2-1Ca",
       "md5sum": "fd2f8d64c8b85add91bc1df63150d508",
       "seqtype": "nucl",
@@ -443,7 +443,7 @@
     {
       "blast_title": "CEN.PK2-1Ca (SGD) strain ORF coding sequences",
       "description": "CEN.PK2-1Ca (SGD) strain ORF coding sequences",
-      "genus": "Other Strains – Coding DNA",
+      "genus": "Alternative Reference Strains - Coding DNA",
       "species": "CEN.PK2-1Ca",
       "md5sum": "e2a4122b99d3875de5c62ee3b7cae064",
       "seqtype": "nucl",
@@ -454,7 +454,7 @@
     {
       "blast_title": "CEN.PK2-1Ca (SGD) strain protein sequences",
       "description": "CEN.PK2-1Ca (SGD) strain protein sequences",
-      "genus": "Other S. cerevisiae Strains",
+      "genus": "Alternative Reference Strains",
       "species": "CEN.PK2-1Ca",
       "md5sum": "806c694894fbe45fba7416e606d3d193",
       "seqtype": "prot",
@@ -564,7 +564,7 @@
     {
       "blast_title": "D273-10B (SGD) strain contig genomic sequences",
       "description": "D273-10B (SGD) strain contig genomic sequences",
-      "genus": "Other Strains – Genomic DNA",
+      "genus": "Alternative Reference Strains - Genomic DNA",
       "species": "D273-10B",
       "md5sum": "0f401242646b1ebbf47a7e71cad34f7f",
       "seqtype": "nucl",
@@ -575,7 +575,7 @@
     {
       "blast_title": "D273-10B (SGD) strain ORF coding sequences",
       "description": "D273-10B (SGD) strain ORF coding sequences",
-      "genus": "Other Strains – Coding DNA",
+      "genus": "Alternative Reference Strains - Coding DNA",
       "species": "D273-10B",
       "md5sum": "653e70a06eaf363f81af48b4171f93ff",
       "seqtype": "nucl",
@@ -586,7 +586,7 @@
     {
       "blast_title": "D273-10B (SGD) strain protein sequences",
       "description": "D273-10B (SGD) strain protein sequences",
-      "genus": "Other S. cerevisiae Strains",
+      "genus": "Alternative Reference Strains",
       "species": "D273-10B",
       "md5sum": "b27ab8798afbb3ab24d425c9fd2a94dc",
       "seqtype": "prot",
@@ -696,7 +696,7 @@
     {
       "blast_title": "FL100 (SGD) strain contig genomic sequences",
       "description": "FL100 (SGD) strain contig genomic sequences",
-      "genus": "Other Strains – Genomic DNA",
+      "genus": "Alternative Reference Strains - Genomic DNA",
       "species": "FL100",
       "md5sum": "44cca4600eef0b3022c49afbfae57045",
       "seqtype": "nucl",
@@ -707,7 +707,7 @@
     {
       "blast_title": "FL100 (SGD) strain ORF coding sequences",
       "description": "FL100 (SGD) strain ORF coding sequences",
-      "genus": "Other Strains – Coding DNA",
+      "genus": "Alternative Reference Strains - Coding DNA",
       "species": "FL100",
       "md5sum": "bc5ab22b048bd57f90aa9b534c2fdbac",
       "seqtype": "nucl",
@@ -718,7 +718,7 @@
     {
       "blast_title": "FL100 (SGD) strain protein sequences",
       "description": "FL100 (SGD) strain protein sequences",
-      "genus": "Other S. cerevisiae Strains",
+      "genus": "Alternative Reference Strains",
       "species": "FL100",
       "md5sum": "373a6034f0ec77a21aecd50df34b8357",
       "seqtype": "prot",
@@ -894,7 +894,7 @@
     {
       "blast_title": "JK9-3d (SGD) strain contig genomic sequences",
       "description": "JK9-3d (SGD) strain contig genomic sequences",
-      "genus": "Other Strains – Genomic DNA",
+      "genus": "Alternative Reference Strains - Genomic DNA",
       "species": "JK9-3d",
       "md5sum": "ad2a9357130576e1c22008e56e58d71b",
       "seqtype": "nucl",
@@ -905,7 +905,7 @@
     {
       "blast_title": "JK9-3d (SGD) strain ORF coding sequences",
       "description": "JK9-3d (SGD) strain ORF coding sequences",
-      "genus": "Other Strains – Coding DNA",
+      "genus": "Alternative Reference Strains - Coding DNA",
       "species": "JK9-3d",
       "md5sum": "24fef0ed634d03f8827da87730deb127",
       "seqtype": "nucl",
@@ -916,7 +916,7 @@
     {
       "blast_title": "JK9-3d (SGD) strain protein sequences",
       "description": "JK9-3d (SGD) strain protein sequences",
-      "genus": "Other S. cerevisiae Strains",
+      "genus": "Alternative Reference Strains",
       "species": "JK9-3d",
       "md5sum": "a6cb73696618526cc0afb1045dcb8b8e",
       "seqtype": "prot",
@@ -1158,7 +1158,7 @@
     {
       "blast_title": "RM11-1A (SGD) strain contig genomic sequences",
       "description": "RM11-1A (SGD) strain contig genomic sequences",
-      "genus": "Other Strains – Genomic DNA",
+      "genus": "Alternative Reference Strains - Genomic DNA",
       "species": "RM11-1A",
       "md5sum": "12e95ef2e53cff66221b10db6e3805de",
       "seqtype": "nucl",
@@ -1169,7 +1169,7 @@
     {
       "blast_title": "RM11-1A (SGD) strain ORF coding sequences",
       "description": "RM11-1A (SGD) strain ORF coding sequences",
-      "genus": "Other Strains – Coding DNA",
+      "genus": "Alternative Reference Strains - Coding DNA",
       "species": "RM11-1A",
       "md5sum": "e7750df1aef41563dc8f12773c95b299",
       "seqtype": "nucl",
@@ -1180,7 +1180,7 @@
     {
       "blast_title": "RM11-1A (SGD) strain protein sequences",
       "description": "RM11-1A (SGD) strain protein sequences",
-      "genus": "Other S. cerevisiae Strains",
+      "genus": "Alternative Reference Strains",
       "species": "RM11-1A",
       "md5sum": "f3896d47284e7554bea4d7572a1282f1",
       "seqtype": "prot",
@@ -1224,7 +1224,7 @@
     {
       "blast_title": "SEY6210 (SGD) strain contig genomic sequences",
       "description": "SEY6210 (SGD) strain contig genomic sequences",
-      "genus": "Other Strains – Genomic DNA",
+      "genus": "Alternative Reference Strains - Genomic DNA",
       "species": "SEY6210",
       "md5sum": "fe492c6c96cbb0d9ea7218586fdb6b0d",
       "seqtype": "nucl",
@@ -1235,7 +1235,7 @@
     {
       "blast_title": "SEY6210 (SGD) strain ORF coding sequences",
       "description": "SEY6210 (SGD) strain ORF coding sequences",
-      "genus": "Other Strains – Coding DNA",
+      "genus": "Alternative Reference Strains - Coding DNA",
       "species": "SEY6210",
       "md5sum": "881faaee94dc440571f69c6492cbd549",
       "seqtype": "nucl",
@@ -1246,7 +1246,7 @@
     {
       "blast_title": "SEY6210 (SGD) strain protein sequences",
       "description": "SEY6210 (SGD) strain protein sequences",
-      "genus": "Other S. cerevisiae Strains",
+      "genus": "Alternative Reference Strains",
       "species": "SEY6210",
       "md5sum": "395f6697265086e25e35ebb6de8827a5",
       "seqtype": "prot",
@@ -1257,7 +1257,7 @@
     {
       "blast_title": "SK1 (SGD) strain contig genomic sequences",
       "description": "SK1 (SGD) strain contig genomic sequences",
-      "genus": "Other Strains – Genomic DNA",
+      "genus": "Alternative Reference Strains - Genomic DNA",
       "species": "SK1",
       "md5sum": "feea5ad0aa4b25cf78734d11f88ae4da",
       "seqtype": "nucl",
@@ -1268,7 +1268,7 @@
     {
       "blast_title": "SK1 (SGD) strain ORF coding sequences",
       "description": "SK1 (SGD) strain ORF coding sequences",
-      "genus": "Other Strains – Coding DNA",
+      "genus": "Alternative Reference Strains - Coding DNA",
       "species": "SK1",
       "md5sum": "02613cdf10b94516fa374ed13ed7993a",
       "seqtype": "nucl",
@@ -1279,7 +1279,7 @@
     {
       "blast_title": "SK1 (SGD) strain protein sequences",
       "description": "SK1 (SGD) strain protein sequences",
-      "genus": "Other S. cerevisiae Strains",
+      "genus": "Alternative Reference Strains",
       "species": "SK1",
       "md5sum": "f8dfddf0058f81eead26f9f3dc0e68bb",
       "seqtype": "prot",
@@ -1290,7 +1290,7 @@
     {
       "blast_title": "Sigma1278b-10560-6B (SGD) strain contig genomic sequences",
       "description": "Sigma1278b-10560-6B (SGD) strain contig genomic sequences",
-      "genus": "Other Strains – Genomic DNA",
+      "genus": "Alternative Reference Strains - Genomic DNA",
       "species": "Sigma1278b-10560-6B",
       "md5sum": "8e39b16f26cad2a38450e83af771ad47",
       "seqtype": "nucl",
@@ -1301,7 +1301,7 @@
     {
       "blast_title": "Sigma1278b-10560-6B (SGD) strain ORF coding sequences",
       "description": "Sigma1278b-10560-6B (SGD) strain ORF coding sequences",
-      "genus": "Other Strains – Coding DNA",
+      "genus": "Alternative Reference Strains - Coding DNA",
       "species": "Sigma1278b-10560-6B",
       "md5sum": "058d735dd0598a6d3fb524fd9325fc69",
       "seqtype": "nucl",
@@ -1312,7 +1312,7 @@
     {
       "blast_title": "Sigma1278b-10560-6B (SGD) strain protein sequences",
       "description": "Sigma1278b-10560-6B (SGD) strain protein sequences",
-      "genus": "Other S. cerevisiae Strains",
+      "genus": "Alternative Reference Strains",
       "species": "Sigma1278b-10560-6B",
       "md5sum": "af718ba153c17d62e1f3de7a2639b296",
       "seqtype": "prot",
@@ -1587,7 +1587,7 @@
     {
       "blast_title": "W303 (SGD) strain contig genomic sequences",
       "description": "W303 (SGD) strain contig genomic sequences",
-      "genus": "Other Strains – Genomic DNA",
+      "genus": "Alternative Reference Strains - Genomic DNA",
       "species": "W303",
       "md5sum": "6e96dc4f004c1a8918defb7f851f20e8",
       "seqtype": "nucl",
@@ -1598,7 +1598,7 @@
     {
       "blast_title": "W303 (SGD) strain ORF coding sequences",
       "description": "W303 (SGD) strain ORF coding sequences",
-      "genus": "Other Strains – Coding DNA",
+      "genus": "Alternative Reference Strains - Coding DNA",
       "species": "W303",
       "md5sum": "835ca4644eea5df66e09bdfc1c1065bf",
       "seqtype": "nucl",
@@ -1609,7 +1609,7 @@
     {
       "blast_title": "W303 (SGD) strain protein sequences",
       "description": "W303 (SGD) strain protein sequences",
-      "genus": "Other S. cerevisiae Strains",
+      "genus": "Alternative Reference Strains",
       "species": "W303",
       "md5sum": "ee26c481cad66230d05e145c7fad78a6",
       "seqtype": "prot",
@@ -1620,7 +1620,7 @@
     {
       "blast_title": "X2180-1A (SGD) strain contig genomic sequences",
       "description": "X2180-1A (SGD) strain contig genomic sequences",
-      "genus": "Other Strains – Genomic DNA",
+      "genus": "Alternative Reference Strains - Genomic DNA",
       "species": "X2180-1A",
       "md5sum": "fc6c55f41b0d249c24291c09226b82dd",
       "seqtype": "nucl",
@@ -1631,7 +1631,7 @@
     {
       "blast_title": "X2180-1A (SGD) strain ORF coding sequences",
       "description": "X2180-1A (SGD) strain ORF coding sequences",
-      "genus": "Other Strains – Coding DNA",
+      "genus": "Alternative Reference Strains - Coding DNA",
       "species": "X2180-1A",
       "md5sum": "e1cf29b1a0581fc1e1b6bfcc616ce808",
       "seqtype": "nucl",
@@ -1642,7 +1642,7 @@
     {
       "blast_title": "X2180-1A (SGD) strain protein sequences",
       "description": "X2180-1A (SGD) strain protein sequences",
-      "genus": "Other S. cerevisiae Strains",
+      "genus": "Alternative Reference Strains",
       "species": "X2180-1A",
       "md5sum": "d39e2b07e81975fede2350624153b2dc",
       "seqtype": "prot",
@@ -1686,7 +1686,7 @@
     {
       "blast_title": "Y55 (SGD) strain contig genomic sequences",
       "description": "Y55 (SGD) strain contig genomic sequences",
-      "genus": "Other Strains – Genomic DNA",
+      "genus": "Alternative Reference Strains - Genomic DNA",
       "species": "Y55",
       "md5sum": "4c36684e0aca42777e78d04aa436f9b8",
       "seqtype": "nucl",
@@ -1697,7 +1697,7 @@
     {
       "blast_title": "Y55 (SGD) strain ORF coding sequences",
       "description": "Y55 (SGD) strain ORF coding sequences",
-      "genus": "Other Strains – Coding DNA",
+      "genus": "Alternative Reference Strains - Coding DNA",
       "species": "Y55",
       "md5sum": "62a1886a91fad1309947dcb2bcc15c45",
       "seqtype": "nucl",
@@ -1708,7 +1708,7 @@
     {
       "blast_title": "Y55 (SGD) strain protein  sequences",
       "description": "Y55 (SGD) strain protein  sequences",
-      "genus": "Other S. cerevisiae Strains",
+      "genus": "Alternative Reference Strains",
       "species": "Y55",
       "md5sum": "fa1a385c10fc29a8df98726eb1781991",
       "seqtype": "prot",
