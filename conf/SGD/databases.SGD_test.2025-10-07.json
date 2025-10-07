@@ -61,7 +61,7 @@
       "version": "SGD:R64-5-1"
     },
     {
-      "blast_title": "ORFs + introns",
+      "blast_title": "ORFs with introns",
       "description": "S288C reference ORF genomic sequences",
       "genus": "Saccharomyces",
       "species": "cerevisiae",
@@ -73,7 +73,7 @@
       "version": "SGD:R64-5-1"
     },
     {
-      "blast_title": "ORFs + 1000 bp upstream/downstream",
+      "blast_title": "ORFs with 1000 bp upstream/downstream",
       "description": "S288C reference ORF genomic sequences +/- 1kb",
       "genus": "Saccharomyces",
       "species": "cerevisiae",
@@ -85,7 +85,7 @@
       "version": "SGD:R64-5-1"
     },
     {
-      "blast_title": "RNA coding + introns",
+      "blast_title": "RNA coding with introns",
       "description": "S288C reference RNA genomic sequences",
       "genus": "Saccharomyces",
       "species": "cerevisiae",
@@ -109,7 +109,7 @@
       "version": "SGD:R64-5-1"
     },
     {
-      "blast_title": "RNA + 1000 bp upstream/downstream",
+      "blast_title": "RNA with 1000 bp upstream/downstream",
       "description": "S288C reference RNA genomic sequences +/- 1kb",
       "genus": "Saccharomyces",
       "species": "cerevisiae",
