@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/323/735/GCF_036323735.1_GRCr8/GCF_036323735.1_GRCr8_genomic.fna.gz",
+      "blast_title": "GRCr8",
+      "description": "GRCr8 Rat Reference Assembly; BN/NHsdMcwi (RGD:61498)",
+      "genus": "Rattus",
+      "species": "norvegicus",
+      "md5sum": "f7f47214cb2b7987c2edc85b3d3a10c5",
+      "seqtype": "nucl",
+      "taxon_id": "NCBITaxon:10116",
+      "version": "GRCr8"
+    },
+    {
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/227/675/GCF_015227675.2_mRatBN7.2/GCF_015227675.2_mRatBN7.2_genomic.fna.gz",
+      "blast_title": "mRatBN7.2",
+      "description": "BN/NHsdMcwi (RGD:61498)",
+      "genus": "Rattus",
+      "species": "norvegicus",
+      "md5sum": "15c0e1d4fc8400a9f54f1bff3670b3aa",
+      "seqtype": "nucl",
+      "taxon_id": "NCBITaxon:10116",
+      "version": "mRatBN7.2"
+    },
+    {
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/021/556/685/GCA_021556685.1_UTH_Rnor_SHRSP_BbbUtx_1.0/GCA_021556685.1_UTH_Rnor_SHRSP_BbbUtx_1.0_genomic.fna.gz",
+      "blast_title": "UTH_Rnor_SHRSP_BbbUtx_1.0",
+      "description": "SHRSP/BbbUtx (RGD:8142383)",
+      "genus": "Rattus",
+      "species": "norvegicus",
+      "md5sum": "aa79b3ea23209355f9b5ff9abc40ef1a",
+      "seqtype": "nucl",
+      "taxon_id": "NCBITaxon:10116",
+      "version": "UTH_Rnor_SHRSP_BbbUtx_1.0"
+    },
+    {
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/041/222/355/GCA_041222355.1_F344_StmMcwi/GCA_041222355.1_F344_StmMcwi_genomic.fna.gz",
+      "blast_title": "F344_StmMcwi",
+      "description": "F344/StmMcwi (RGD:39456105)",
+      "genus": "Rattus",
+      "species": "norvegicus",
+      "md5sum": "f554a36a22b154d899836dfd853020d9",
+      "seqtype": "nucl",
+      "taxon_id": "NCBITaxon:10116",
+      "version": "F344_StmMcwi"
+    },
+    {
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/045/687/995/GCA_045687995.1_Lyon_Normot_Rat_Genome/GCA_045687995.1_Lyon_Normot_Rat_Genome_genomic.fna.gz",
+      "blast_title": "Lyon_Normot_Rat_Genome",
+      "description": "LN/MavRrrc (RGD:61015)",
+      "genus": "Rattus",
+      "species": "norvegicus",
+      "md5sum": "fb6b2bcfc1ac6215f1efa5f5d8ee6438",
+      "seqtype": "nucl",
+      "taxon_id": "NCBITaxon:10116",
+      "version": "Lyon_Normot_Rat_Genome"
+    },
+    {
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/045/688/005/GCA_045688005.1_Dahl_SR_JrHsd/GCA_045688005.1_Dahl_SR_JrHsd_genomic.fna.gz",
+      "blast_title": "Dahl_SR_JrHsd",
+      "description": "SR/JrHsd (RGD:1582184)",
+      "genus": "Rattus",
+      "species": "norvegicus",
+      "md5sum": "057b9378f465dfc31c7a139c1c7117ba",
+      "seqtype": "nucl",
+      "taxon_id": "NCBITaxon:10116",
+      "version": "Dahl_SR_JrHsd"
+    },
+    {
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/045/687/965/GCA_045687965.1_Lyon_Hypertensive/GCA_045687965.1_Lyon_Hypertensive_genomic.fna.gz",
+      "blast_title": "Lyon_Hypertensive",
+      "description": "LH/MavRrrcAek (RGD:10755352)",
+      "genus": "Rattus",
+      "species": "norvegicus",
+      "md5sum": "0d21ec677b5592844362c078b6d421d0",
+      "seqtype": "nucl",
+      "taxon_id": "NCBITaxon:10116",
+      "version": "Lyon_Hypertensive"
+    },
+    {
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/515/805/GCA_023515805.2_Genome_assembly_UTH_Rnor_WKY_Bbb_1.1/GCA_023515805.2_Genome_assembly_UTH_Rnor_WKY_Bbb_1.1_genomic.fna.gz",
+      "blast_title": "Genome_assembly_UTH_Rnor_WKY_Bbb_1.1",
+      "description": "WKY/Bbb (RGD:1581635)",
+      "genus": "Rattus",
+      "species": "norvegicus",
+      "md5sum": "e955b064805c0174c2cc1d97ec621c32",
+      "seqtype": "nucl",
+      "taxon_id": "NCBITaxon:10116",
+      "version": "Genome_assembly_UTH_Rnor_WKY_Bbb_1.1"
+    },
+    {
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/515/785/GCA_023515785.2_UTH_Rnor_SHR_Utx_2.0/GCA_023515785.2_UTH_Rnor_SHR_Utx_2.0_genomic.fna.gz",
+      "blast_title": "UTH_Rnor_SHR_Utx_2.0",
+      "description": "SHR/Utx (RGD:8142385)",
+      "genus": "Rattus",
+      "species": "norvegicus",
+      "md5sum": "df6acd7bd9507869b9b7962a173d2e82",
+      "seqtype": "nucl",
+      "taxon_id": "NCBITaxon:10116",
+      "version": "UTH_Rnor_SHR_Utx_2.0"
+    }
+  ],
+  "metadata": {
+    "contact": "rgd.web2@mcw.edu",
+    "homepage_url": "https://rgd.mcw.edu",
+    "logo_url": "https://rgd.mcw.edu/rgdweb/common/images/rgd_logo.jpg",
+    "dataProvider": "RGD",
+    "dateProduced": "2025-10-14T00:00:00+00:00",
+    "release": "production",
+    "public": true
+  }
+}
