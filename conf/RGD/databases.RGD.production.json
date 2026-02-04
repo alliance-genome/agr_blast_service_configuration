@@ -10,7 +10,13 @@
       "seqtype": "nucl",
       "species": "norvegicus",
       "taxon_id": "NCBITaxon:10116",
-      "version": "production"
+      "version": "production",
+      "genome_browser": {
+        "type": "jbrowse2",
+        "url": "https://rgd.mcw.edu/jbrowse2/",
+        "assembly": "mRatBN7.2",
+        "tracks": ["Rat mRatBN7.2 (rn7) Genes and Transcripts-mRatBN7.2"]
+      }
     },
     {
       "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/323/735/GCF_036323735.1_GRCr8/GCF_036323735.1_GRCr8_genomic.fna.gz",
@@ -22,7 +28,13 @@
       "seqtype": "nucl",
       "species": "norvegicus",
       "taxon_id": "NCBITaxon:10116",
-      "version": "production"
+      "version": "production",
+      "genome_browser": {
+        "type": "jbrowse2",
+        "url": "https://rgd.mcw.edu/jbrowse2/",
+        "assembly": "GRCr8",
+        "tracks": ["Rat GRCr8 (rn8) Genes and Transcripts-GRCr8"]
+      }
     }
   ],
   "metadata": {

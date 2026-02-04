@@ -9,7 +9,13 @@
       "md5sum": "f7f47214cb2b7987c2edc85b3d3a10c5",
       "seqtype": "nucl",
       "taxon_id": "NCBITaxon:10116",
-      "version": "GRCr8"
+      "version": "GRCr8",
+      "genome_browser": {
+        "type": "jbrowse2",
+        "url": "https://rgd.mcw.edu/jbrowse2/",
+        "assembly": "GRCr8",
+        "tracks": ["Rat GRCr8 (rn8) Genes and Transcripts-GRCr8"]
+      }
     },
     {
       "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/227/675/GCF_015227675.2_mRatBN7.2/GCF_015227675.2_mRatBN7.2_genomic.fna.gz",
@@ -20,7 +26,13 @@
       "md5sum": "15c0e1d4fc8400a9f54f1bff3670b3aa",
       "seqtype": "nucl",
       "taxon_id": "NCBITaxon:10116",
-      "version": "mRatBN7.2"
+      "version": "mRatBN7.2",
+      "genome_browser": {
+        "type": "jbrowse2",
+        "url": "https://rgd.mcw.edu/jbrowse2/",
+        "assembly": "mRatBN7.2",
+        "tracks": ["Rat mRatBN7.2 (rn7) Genes and Transcripts-mRatBN7.2"]
+      }
     },
     {
       "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/021/556/685/GCA_021556685.1_UTH_Rnor_SHRSP_BbbUtx_1.0/GCA_021556685.1_UTH_Rnor_SHRSP_BbbUtx_1.0_genomic.fna.gz",
