@@ -1134,6 +1134,28 @@
          "taxon_id" : "NCBITaxon:1503980",
          "uri" : "ftp://ftp.ebi.ac.uk/pub/databases/wormbase/releases/WS298/species/c_latens/PRJNA248912/c_latens.PRJNA248912.WS298.protein.fa.gz",
          "version" : "WS298"
+      },
+      {
+         "blast_title" : "S. hermaphroditum Protein Sequences",
+         "description" : "Steinernema hermaphroditum protein sequences",
+         "genus" : "Steinernema",
+         "md5sum" : "a314548565115e5ec436f3c2345b5274",
+         "seqtype" : "prot",
+         "species" : "hermaphroditum",
+         "taxon_id" : "NCBITaxon:34508",
+         "uri" : "https://osf.io/eud54/download/s_hermaphroditum.pep.fa.gz",
+         "version" : "WS298"
+      },
+      {
+         "blast_title" : "S. hermaphroditum CDS Sequences",
+         "description" : "Steinernema hermaphroditum CDS sequences",
+         "genus" : "Steinernema",
+         "md5sum" : "f01e659e214a5876071ebe7699b34c6b",
+         "seqtype" : "nucl",
+         "species" : "hermaphroditum",
+         "taxon_id" : "NCBITaxon:34508",
+         "uri" : "https://osf.io/ye9qb/download/s_hermaphroditum.cds_dna.fa.gz",
+         "version" : "WS298"
       }
    ],
    "metadata" : {
