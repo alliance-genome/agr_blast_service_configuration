@@ -581,8 +581,8 @@
           "Drosophila_melanogaster_variants",
           "Drosophila_melanogaster_multiple-variant_alleles"
         ],
-        "type": "jbrowse2",
-        "url": "https://www.alliancegenome.org/jbrowse2/index.html"
+        "type": "jbrowse",
+        "url": "https://flybase.org/jbrowse/?data=data/json/dmel"
       },
       "seqtype": "nucl"
     },
