@@ -3027,7 +3027,16 @@
       "taxon_id": "NCBITaxon:559292",
       "seqcol_type": "Saccharomyces",
       "uri": "https://sgd-prod-upload.s3.amazonaws.com/S000349299/saccharomyces_cerevisiae_genomic.fa.gz",
-      "version": "SGD:2024-04-11"
+      "version": "SGD:2024-04-11",
+      "genome_browser": {
+        "assembly": "",
+        "tracks": [
+          "DNA",
+          "S288C"
+        ],
+        "type": "jbrowse",
+        "url": "https://jbrowse.yeastgenome.org/"
+      }
     },
     {
       "bioproject": "PRJNA43747",

@@ -9,7 +9,16 @@
       "seqtype": "nucl",
       "taxon_id": "559292",
       "uri": "https://sgd-prod-upload.s3.amazonaws.com/S000317572/Sc_nuclear_chr.fsa.gz",
-      "version": "SGD:R64-5-1"
+      "version": "SGD:R64-5-1",
+      "genome_browser": {
+        "assembly": "",
+        "tracks": [
+          "DNA",
+          "S288C"
+        ],
+        "type": "jbrowse",
+        "url": "https://jbrowse.yeastgenome.org/"
+      }
     },
     {
       "blast_title": "Mitochondrial chromosome",
@@ -20,7 +29,16 @@
       "seqtype": "nucl",
       "taxon_id": "559292",
       "uri": "https://sgd-prod-upload.s3.amazonaws.com/S000317573/Sc_mito_chr.fsa.gz",
-      "version": "SGD:R64-5-1"
+      "version": "SGD:R64-5-1",
+      "genome_browser": {
+        "assembly": "",
+        "tracks": [
+          "DNA",
+          "S288C"
+        ],
+        "type": "jbrowse",
+        "url": "https://jbrowse.yeastgenome.org/"
+      }
     },
     {
       "blast_title": "2-micron plasmid",
