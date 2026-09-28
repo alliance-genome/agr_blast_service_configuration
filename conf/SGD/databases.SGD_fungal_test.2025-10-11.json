@@ -3029,13 +3029,12 @@
       "uri": "https://sgd-prod-upload.s3.amazonaws.com/S000349299/saccharomyces_cerevisiae_genomic.fa.gz",
       "version": "SGD:2024-04-11",
       "genome_browser": {
-        "assembly": "",
+        "assembly": "Saccharomyces_cerevisiae",
         "tracks": [
-          "DNA",
-          "S288C"
+          "Saccharomyces_cerevisiae_all_genes"
         ],
-        "type": "jbrowse",
-        "url": "https://jbrowse.yeastgenome.org/"
+        "type": "jbrowse2",
+        "url": "https://www.alliancegenome.org/jbrowse2/"
       }
     },
     {

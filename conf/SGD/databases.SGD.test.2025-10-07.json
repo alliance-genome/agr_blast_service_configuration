@@ -12,13 +12,12 @@
       "seqcol_type": "S288C Reference Strain|Genomic DNA",
       "version": "SGD:R64-5-1",
       "genome_browser": {
-        "assembly": "",
+        "assembly": "Saccharomyces_cerevisiae",
         "tracks": [
-          "DNA",
-          "S288C"
+          "Saccharomyces_cerevisiae_all_genes"
         ],
-        "type": "jbrowse",
-        "url": "https://jbrowse.yeastgenome.org/"
+        "type": "jbrowse2",
+        "url": "https://www.alliancegenome.org/jbrowse2/"
       }
     },
     {
@@ -33,13 +32,12 @@
       "seqcol_type": "S288C Reference Strain|Genomic DNA",
       "version": "SGD:R64-5-1",
       "genome_browser": {
-        "assembly": "",
+        "assembly": "Saccharomyces_cerevisiae",
         "tracks": [
-          "DNA",
-          "S288C"
+          "Saccharomyces_cerevisiae_all_genes"
         ],
-        "type": "jbrowse",
-        "url": "https://jbrowse.yeastgenome.org/"
+        "type": "jbrowse2",
+        "url": "https://www.alliancegenome.org/jbrowse2/"
       }
     },
     {
