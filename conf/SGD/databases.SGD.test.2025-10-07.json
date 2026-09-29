@@ -82,7 +82,15 @@
       "taxon_id": "559292",
       "uri": "https://sgd-prod-upload.s3.amazonaws.com/S000317576/YeastORF_pep.fsa.gz",
       "seqcol_type": "S288C Reference Strain|ORF protein sequences",
-      "version": "SGD:R64-5-1"
+      "version": "SGD:R64-5-1",
+      "genome_browser": {
+        "assembly": "Saccharomyces_cerevisiae",
+        "tracks": [
+          "Saccharomyces_cerevisiae_all_genes"
+        ],
+        "type": "jbrowse2",
+        "url": "https://www.alliancegenome.org/jbrowse2/"
+      }
     },
     {
       "blast_title": "ORFs with introns",
