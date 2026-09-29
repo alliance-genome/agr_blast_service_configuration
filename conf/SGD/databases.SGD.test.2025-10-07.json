@@ -62,7 +62,15 @@
       "taxon_id": "559292",
       "uri": "https://sgd-prod-upload.s3.amazonaws.com/S000317575/YeastORF.fsa.gz",
       "seqcol_type": "S288C Reference Strain|ORFs (DNA only)",
-      "version": "SGD:R64-5-1"
+      "version": "SGD:R64-5-1",
+      "genome_browser": {
+        "assembly": "Saccharomyces_cerevisiae",
+        "tracks": [
+          "Saccharomyces_cerevisiae_all_genes"
+        ],
+        "type": "jbrowse2",
+        "url": "https://www.alliancegenome.org/jbrowse2/"
+      }
     },
     {
       "blast_title": "Protein sequences",
@@ -86,7 +94,15 @@
       "taxon_id": "559292",
       "uri": "https://sgd-prod-upload.s3.amazonaws.com/S000317577/YeastORF-Genomic.fsa.gz",
       "seqcol_type": "S288C Reference Strain|ORFs (DNA only)",
-      "version": "SGD:R64-5-1"
+      "version": "SGD:R64-5-1",
+      "genome_browser": {
+        "assembly": "Saccharomyces_cerevisiae",
+        "tracks": [
+          "Saccharomyces_cerevisiae_all_genes"
+        ],
+        "type": "jbrowse2",
+        "url": "https://www.alliancegenome.org/jbrowse2/"
+      }
     },
     {
       "blast_title": "ORFs with 1000 bp upstream/downstream",
@@ -98,7 +114,15 @@
       "taxon_id": "559292",
       "uri": "https://sgd-prod-upload.s3.amazonaws.com/S000317578/YeastORF-Genomic-1K.fsa.gz",
       "seqcol_type": "S288C Reference Strain|ORFs (DNA only)",
-      "version": "SGD:R64-5-1"
+      "version": "SGD:R64-5-1",
+      "genome_browser": {
+        "assembly": "Saccharomyces_cerevisiae",
+        "tracks": [
+          "Saccharomyces_cerevisiae_all_genes"
+        ],
+        "type": "jbrowse2",
+        "url": "https://www.alliancegenome.org/jbrowse2/"
+      }
     },
     {
       "blast_title": "RNA coding with introns",
@@ -110,7 +134,15 @@
       "taxon_id": "559292",
       "uri": "https://sgd-prod-upload.s3.amazonaws.com/S000317579/YeastRNA-genomic.fsa.gz",
       "seqcol_type": "S288C Reference Strain|RNA",
-      "version": "SGD:R64-5-1"
+      "version": "SGD:R64-5-1",
+      "genome_browser": {
+        "assembly": "Saccharomyces_cerevisiae",
+        "tracks": [
+          "Saccharomyces_cerevisiae_all_genes"
+        ],
+        "type": "jbrowse2",
+        "url": "https://www.alliancegenome.org/jbrowse2/"
+      }
     },
     {
       "blast_title": "RNA coding",
@@ -122,7 +154,15 @@
       "taxon_id": "559292",
       "uri": "https://sgd-prod-upload.s3.amazonaws.com/S000317580/YeastRNA-coding.fsa.gz",
       "seqcol_type": "S288C Reference Strain|RNA",
-      "version": "SGD:R64-5-1"
+      "version": "SGD:R64-5-1",
+      "genome_browser": {
+        "assembly": "Saccharomyces_cerevisiae",
+        "tracks": [
+          "Saccharomyces_cerevisiae_all_genes"
+        ],
+        "type": "jbrowse2",
+        "url": "https://www.alliancegenome.org/jbrowse2/"
+      }
     },
     {
       "blast_title": "RNA with 1000 bp upstream/downstream",
@@ -134,7 +174,15 @@
       "taxon_id": "559292",
       "uri": "https://sgd-prod-upload.s3.amazonaws.com/S000317581/YeastRNA-genomic-1K.fsa.gz",
       "seqcol_type": "S288C Reference Strain|RNA",
-      "version": "SGD:R64-5-1"
+      "version": "SGD:R64-5-1",
+      "genome_browser": {
+        "assembly": "Saccharomyces_cerevisiae",
+        "tracks": [
+          "Saccharomyces_cerevisiae_all_genes"
+        ],
+        "type": "jbrowse2",
+        "url": "https://www.alliancegenome.org/jbrowse2/"
+      }
     },
     {
       "blast_title": "Intergenic sequences (between ORFs, RNAs, LTRs, Tys",
@@ -146,7 +194,15 @@
       "taxon_id": "559292",
       "uri": "https://sgd-prod-upload.s3.amazonaws.com/S000317582/NotFeature.fsa.gz",
       "seqcol_type": "S288C Reference Strain|Non-genic DNA",
-      "version": "SGD:R64-5-1"
+      "version": "SGD:R64-5-1",
+      "genome_browser": {
+        "assembly": "Saccharomyces_cerevisiae",
+        "tracks": [
+          "Saccharomyces_cerevisiae_all_genes"
+        ],
+        "type": "jbrowse2",
+        "url": "https://www.alliancegenome.org/jbrowse2/"
+      }
     },
     {
       "blast_title": "Yeast cloning vector collection",
