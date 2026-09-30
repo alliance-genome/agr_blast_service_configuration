@@ -581,7 +581,7 @@
           "RNA"
         ],
         "type": "jbrowse2",
-        "url": "https://flybase.org/jbrowse2/?config=dmel%2Fconfig.json"
+        "url": "https://flybase.org/jbrowse2/?config=dmel%2Fconfig.json&tracklist=true"
       },
       "seqtype": "nucl"
     },
