@@ -1,55 +1,90 @@
 name: Create BLAST Databases
+
+# Deliberately NOT triggered by merging a config.
+#
+# It used to be `pull_request: types: [closed]`, so every merged PR touching a
+# .json started a build on the self-hosted runner. Four things made that
+# dangerous rather than merely surprising:
+#
+#   * `timeout-minutes: 5` against config sets whose sources run to several GB.
+#     The ALLIANCE set is ~4.5 GB compressed; it cannot download in five
+#     minutes, so the job was cancelled part-way through every time.
+#   * `cancel-in-progress: true` meant a second merge killed the first build
+#     mid-write.
+#   * It ran from the repository root, so the pipeline's `../data` relative
+#     paths resolved to /home/ec2-user/gitroot/data -- not the real tree under
+#     agr_blastdb_manager -- and a build wrote into the wrong place.
+#   * The environment was taken from `basename | cut -d'.' -f3`, which gives
+#     "test" for databases.SGD.test.2025-10-07.json and "5" for
+#     databases.XB.5.5.1.json. It is a required input now rather than derived:
+#     `metadata.release` cannot stand in for it either, being free text that
+#     reads "SGD:R64-5-1" in one config and "XB 5.5.1", with a space, in
+#     another. The environment names a directory, so whoever dispatches the
+#     build says what it is.
+#
+# Real builds are run by hand (src/blast_db_creation.log is current and 2 MB;
+# the repository-root copy is empty), so nothing is lost by requiring a
+# deliberate dispatch. Merging a config is a config change; building databases
+# from it is a separate decision with its own timing.
 on:
-  pull_request:
-    types: [closed]
-    branches: [main]
   workflow_dispatch:
     inputs:
       json_file:
-        description: 'Full path to JSON file (e.g., conf/WB/databases.WB.WS295.json)'
+        description: 'Path to the config, e.g. conf/ALLIANCE/databases.ALLIANCE.prod.json'
+        required: true
+        type: string
+      environment:
+        description: 'Environment to build as, e.g. prod or WS298. Names the directory under /var/sequenceserver-data/blast/<MOD>/.'
         required: true
         type: string
 
 jobs:
   create-blast-db:
-    if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
     runs-on: blast2
-    timeout-minutes: 5
-    concurrency: 
+    # A full set downloads several GB and runs makeblastdb over it.
+    timeout-minutes: 360
+    concurrency:
       group: blast-${{ github.ref }}
-      cancel-in-progress: true
+      # NOT cancel-in-progress: killing a build part-way through leaves a
+      # half-written database behind.
+      cancel-in-progress: false
 
     steps:
       - name: Checkout configuration repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: config
-          ref: ${{ github.event.pull_request.head.sha }}
-          fetch-depth: 2
 
-      - name: Get file to process
-        id: changed
+      - name: Check the inputs before downloading anything
+        id: env
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "file=${{ github.event.inputs.json_file }}" >> $GITHUB_OUTPUT
-          else
-            CHANGED_FILE=$(git -C config diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} | grep -E '\.json$' || true)
-            if [ -z "$CHANGED_FILE" ]; then
-              echo "No JSON files changed"
-              exit 0
-            fi
-            echo "file=$CHANGED_FILE" >> $GITHUB_OUTPUT
-          fi
+          set -euo pipefail
+          CONFIG="$GITHUB_WORKSPACE/config/${{ inputs.json_file }}"
+          test -f "$CONFIG" || { echo "no such config: ${{ inputs.json_file }}"; exit 1; }
+
+          ENVIRONMENT="${{ inputs.environment }}"
+          # It becomes a path segment, so refuse anything that is not one.
+          case "$ENVIRONMENT" in
+            *[!A-Za-z0-9._-]*|""|.|..)
+              echo "environment must be a single path segment of [A-Za-z0-9._-]: '$ENVIRONMENT'"
+              exit 1 ;;
+          esac
+
+          echo "Building $CONFIG as environment '$ENVIRONMENT'"
+          echo "environment=$ENVIRONMENT" >> "$GITHUB_OUTPUT"
+          echo "config=$CONFIG" >> "$GITHUB_OUTPUT"
 
       - name: Run BLAST DB creation
         run: |
+          set -euo pipefail
           cd /home/ec2-user/gitroot/agr_blastdb_manager
-          git pull origin main || {
-            echo "Failed to pull latest changes"
-            exit 1
-          }
-          
-          poetry run python src/create_blast_db.py \
-            -j $GITHUB_WORKSPACE/config/${{ steps.changed.outputs.file }} \
+          git pull origin main
+          # From src/: the pipeline resolves ../data, ../logs and ../config
+          # relative to the working directory.
+          cd src
+          # uv, not poetry -- this repository moved to uv.
+          uv run python create_blast_db.py \
+            -j "${{ steps.env.outputs.config }}" \
             -u \
-            -e $(basename ${{ steps.changed.outputs.file }} .json | cut -d'.' -f3)
+            -e "${{ steps.env.outputs.environment }}" \
+            --validate
