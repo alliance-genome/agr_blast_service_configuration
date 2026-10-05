@@ -1136,7 +1136,7 @@
          "version" : "WS296"
       }
    ],
-   "metaData" : {
+   "metadata" : {
       "contact" : "help@wormbase.org",
       "dataProvider" : "WB",
       "dateProduced" : "2025-02-26T02:57:51+00:00",

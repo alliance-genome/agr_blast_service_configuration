@@ -1136,7 +1136,7 @@
          "version" : "WS294"
       }
    ],
-   "metaData" : {
+   "metadata" : {
       "contact" : "help@wormbase.org",
       "dataProvider" : "WB",
       "dateProduced" : "2024-08-15T18:26:13+01:00",

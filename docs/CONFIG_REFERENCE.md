@@ -489,12 +489,13 @@ host and exit 0 against the current tree. Run from anywhere else, it dies with
 
 Three things about it will bite you.
 
-**It only checks what `conf/global.yaml` names.** The loop at `:45-49` iterates
-providers and environments from the global file and constructs a filename for
-each. `global.yaml` currently lists six pairs — `WB/WS291`, `WB/WS292`,
-`FB/FB2024_04`, `SGD/2024-06-13`, `XB/5.5.1`, `ALLIANCE/prod` — so six of the
-36 configs in `conf/` are validated and thirty are not. Validating all 36
-against `schemas/metadata_schema.json` directly, ten fail:
+**It checks every config now, and it did not always.** It walks
+`conf/*/databases.*.json`. Until recently it iterated the provider/environment
+pairs in `global.yaml` and constructed a filename for each, so six of the 36
+configs were validated and thirty were not — and files such as
+`databases.SGD_fungal.2024-04-11.json` were unreachable by construction,
+because that loop would have looked in a `conf/SGD_fungal/` directory that does
+not exist. When all 36 were first checked, ten failed:
 
 | File | Why |
 |---|---|
@@ -503,21 +504,41 @@ against `schemas/metadata_schema.json` directly, ten fail:
 | `conf/SGD/databases.SGD.2025-10-03_combined.json`, `SGD.test.2025-10-07.json`, `SGD_fungal_test.2025-10-11.json`, `SGD_test.2025-10-03.json` | same three `genome_browser` fields |
 
 `SGD.test.2025-10-07.json` and `SGD_fungal_test.2025-10-11.json` are the two
-configs SGD is served from. They have been deployed, repeatedly, in a state the
-repository's own schema rejects — because `global.yaml` does not name them, so
+configs SGD is served from. They had been deployed, repeatedly, in a state the
+repository's own schema rejected — because `global.yaml` did not name them, so
 nothing ever asked.
 
-`global.yaml` last had a content change on 2024-09-29 (commit d7c849d). Part of
-why it drifts is mechanical: `.github/workflows/flybase.yml` does
-`perl -pi -e 's/FB\d{4}_\d{2}/<new release>/' global.yaml` and then opens a PR
-with `add-paths: "conf/FB/*.json"`, which excludes `conf/global.yaml`. The edit
-is made and never committed.
+Both classes are now resolved, and in opposite directions. The four `metaData`
+files were typos and were corrected: 32 configs spell it `metadata`, and that
+is what the schema requires. The `genome_browser` failures were the schema's
+fault, not the configs': `blast/hit.rb:130` and `:146` guard on
+`has_key?("gene_track")` and `has_key?("mod_gene_url")`, so both are optional
+to the consumer. They were removed from `required`. `data_url` is read
+unconditionally inside the `gene_track` branch at `:135-137`, so it is required
+only when `gene_track` is present, which the schema now says with draft-06
+`dependencies`.
 
-**Adding RGD to `global.yaml` will fail.** `schemas/global_schema.json:27-34`
-enumerates `WB`, `SGD`, `XB`, `FB`, `ZFIN`, `ALLIANCE`. `RGD` is not in the
-list, although `conf/RGD/` has existed since 2025 and the manager's own MOD list
-includes it (`agr_blastdb_manager/src/utils.py:35`). The enum needs `RGD` added
-before the RGD configs can be covered.
+`global.yaml` had no content change between 2024-09-29 (commit d7c849d) and
+this one. The reason was mechanical: `.github/workflows/flybase.yml` does
+`perl -pi -e 's/FB\d{4}_\d{2}/<new release>/' global.yaml` and then opened a PR
+with `add-paths: "conf/FB/*.json"`, which excluded `conf/global.yaml` — so the
+edit was made and discarded on every run, which is how the file sat at
+FB2024_04 while nine newer FB configs landed. `add-paths` now lists
+`conf/global.yaml` as well, and the pin has been brought up to FB2026_03.
+
+Validation no longer depends on it, so a stale `global.yaml` cannot hide a
+broken config any more. What it still decides is what a
+`create_blast_db.py -g conf/global.yaml` run builds, and it names six pairs —
+so the validator prints the config files it does not name rather than leaving
+that invisible. Bringing the WB, SGD and XB pins up to the deployed releases
+changes what a full build would do and is a decision for whoever runs it.
+
+**RGD can be named now.** `schemas/global_schema.json` enumerated `WB`, `SGD`,
+`XB`, `FB`, `ZFIN`, `ALLIANCE` and omitted `RGD`, although `conf/RGD/` has
+existed since 2025 and the manager's own MOD list includes it
+(`agr_blastdb_manager/src/utils.py:35`). Naming RGD made CI fail on correct
+config. `RGD` has been added to the enum. `MGD` is still absent, and has no
+configs; add it to the enum at the same time as the first one.
 
 **`format` keywords are not enforced.** The script calls
 `jsonschema.validate(instance, schema)` with no `format_checker`, so
@@ -526,17 +547,21 @@ decorative. A `uri` of `this is not a uri`, a `contact` of `not an email` and a
 `dateProduced` of `not a date` all pass. SGD's `dateProduced: "2025-10-07"` is
 a date, not a date-time, and passes for the same reason.
 
-On failure the script does not print "Not Valid" and exit 1 as its structure
-suggests — `validate()` raises, so the else-branches at `:36-38` and `:70-72`,
-the ones that print "Not Valid" and exit 1, are unreachable. The `if` branches
-above them are what run on a successful pass, printing "Global Config Valid
-format" (`:34-35`) and "Valid" (`:68-69`). What you get instead is an uncaught
-`ValidationError`, exit code
-1, and a traceback that includes the entire offending instance. For a WormBase
-config that is roughly 60 KB of output for a one-word error, so read the first
-five lines and ignore the rest.
+Failures used to arrive as an uncaught `ValidationError` with a traceback
+containing the entire offending instance — roughly 60 KB of output for a
+one-word error in a WormBase config. The script's own "Not Valid" branches were
+unreachable, because `jsonschema.validate()` raises rather than returning a
+result. It now uses `iter_errors`, so each failure is one line naming the JSON
+pointer and the message, and every file is checked before it exits rather than
+aborting on the first.
 
-To check a file `global.yaml` does not name, validate it directly:
+One thing it still does not do is enforce `format`. No `format_checker` is
+passed, so `"format": "uri"`, `"email"` and `"date-time"` are decorative: a
+`uri` of `this is not a uri` passes. Turning it on would newly fail real
+configs — SGD's `dateProduced: "2025-10-07"` is a date, not a date-time — so it
+is left off deliberately rather than by oversight.
+
+To check one file on its own:
 
 ```shell
 python3 - <<'EOF'
@@ -568,11 +593,12 @@ prints the JSON pointer instead of the instance.
    inside `genome_browser.data_url` — WormBase's `data_url` embeds the release
    (`.../WormBase/WS298/p_redivivus_PRJNA186477/`), so a copied config will
    silently point gene lookups at the previous release's NCList data.
-4. Add the provider and environment to `conf/global.yaml` so the validator
-   covers the file. If the provider is RGD, add `RGD` to the enum in
-   `schemas/global_schema.json` first.
-5. Validate, with the command above and, because `global.yaml` coverage is
-   partial, with `iter_errors` against the file you actually changed.
+4. Add the provider and environment to `conf/global.yaml` if a
+   `create_blast_db.py -g` run should build it. The validator no longer needs
+   this — it checks every file in `conf/` either way — but a pair named there
+   with no file behind it is a validation failure, so the two must agree.
+5. Validate: `poetry run python bin/validate_blast_db_config.py` from the
+   repository root checks everything and lists each file.
 6. Decide the environment name the build will deploy under, and pass it as
    `-e`. It is not read from the filename. If you let the CI workflow infer it,
    check what `cut -d'.' -f3` gives for your filename first.
