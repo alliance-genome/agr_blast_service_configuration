@@ -39,7 +39,13 @@ jobs:
           uses: peter-evans/create-pull-request@v7
           with:
             path: agr_blast_service_configuration
-            add-paths: "conf/FB/*.json"
+            # global.yaml too: the "Replace release number" step above
+            # rewrites it, and while this listed only conf/FB/*.json that
+            # edit was discarded on every run -- which is why the file sat
+            # at FB2024_04 while nine newer FB configs landed.
+            add-paths: |
+              conf/FB/*.json
+              conf/global.yaml
             commit-message: ${{ github.event.inputs.FB-release }} BLAST config
             branch: ${{ github.event.inputs.FB-release }}-blast-config-update
             title: "[Update] ${{ github.event.inputs.FB-release }} BLAST config"

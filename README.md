@@ -56,10 +56,14 @@ path.
 poetry run python bin/validate_blast_db_config.py
 ```
 
-This only validates the provider/environment pairs named in `conf/global.yaml`,
-which is not all of `conf/`. See the validation section of
-[docs/CONFIG_REFERENCE.md](docs/CONFIG_REFERENCE.md) for how to check a file
-that `global.yaml` does not name.
+This validates `conf/global.yaml` and **every** `conf/*/databases.*.json`,
+reporting each file and continuing past a failure so that one bad config does
+not hide the next. It exits non-zero if anything failed.
+
+It used to validate only the six provider/environment pairs `global.yaml`
+names, which left 30 of the 36 config files unchecked -- every deployed one
+among them. It also reports, without failing, which configs `global.yaml` does
+not name, because that is what a `create_blast_db.py -g` run would skip.
 
 ## Auto generated code
 
