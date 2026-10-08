@@ -77,6 +77,7 @@
       {
          "bioproject" : "PRJNA10731",
          "blast_title" : "C. briggsae Genome Assembly",
+         "seqid_prefix" : "Cbri",
          "description" : "Caenorhabditis briggsae genome assembly",
          "genome_browser" : {
             "assembly" : "c_briggsae_PRJNA10731",
@@ -151,6 +152,7 @@
       {
          "bioproject" : "PRJNA577507",
          "blast_title" : "C. remanei PX506 Genome Assembly",
+         "seqid_prefix" : "PX506",
          "description" : "Caenorhabditis remanei PX506 genome assembly",
          "genome_browser" : {
             "assembly" : "c_remanei_PRJNA577507",
@@ -262,6 +264,7 @@
       {
          "bioproject" : "PRJNA275000",
          "blast_title" : "C. elegans CB4856 Genome Assembly",
+         "seqid_prefix" : "CB4856",
          "description" : "Caenorhabditis elegans CB4856 genome assembly",
          "genome_browser" : {
             "assembly" : "c_elegans_PRJNA275000",
@@ -842,6 +845,7 @@
       {
          "bioproject" : "PRJNA13758",
          "blast_title" : "C. elegans Genome Assembly",
+         "seqid_prefix" : "N2",
          "description" : "Caenorhabditis elegans genome assembly",
          "genome_browser" : {
             "assembly" : "c_elegans_PRJNA13758",
