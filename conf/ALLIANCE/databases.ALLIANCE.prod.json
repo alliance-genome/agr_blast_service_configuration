@@ -27,26 +27,44 @@
 			"version" : "WS292"
 		},
 		{
-			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_000002035.6_GRCz11_genomic.fna.gz",
+			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_049306965.1_GRCz12tu_genomic.fna.gz",
 			"bioproject": "",
-			"blast_title": "ZFIN GRCz11",
-			"seqid_prefix": "GRCz11",
-			"description": "ZFIN GCF_000002035.6 GRCz11",
+			"blast_title": "ZFIN GRCz12tu",
+			"seqid_prefix": "GRCz12tu",
+			"description": "ZFIN GCF_049306965.1 GRCz12tu",
+			"genome_browser": {
+				"assembly": "Danio_rerio",
+				"ref_name": "accession",
+				"tracks": [
+					"Danio_rerio_all_genes"
+				],
+				"type": "jbrowse2",
+				"url": "https://www.alliancegenome.org/jbrowse2/"
+			},
 			"genus": "Danio",
-			"md5sum": "4400bdfa1eb6842bddd52cef73bf0a54",
+			"md5sum": "7c4e66f0948fe62497ff28463797ed91",
 			"seqtype": "nucl",
 			"species": "rerio",
 			"taxon_id": "NCBITaxon:7955",
 			"version": "production"
 		},
 	        {
-			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_015227675.2_mRatBN7.2_genomic.fna.gz",
+			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_036323735.1_GRCr8_genomic.fna.gz",
 			"bioproject": "",
-			"blast_title": "RGD mRatBN7.2",
-			"seqid_prefix": "mRatBN7.2",
-			"description": "RGD GCF_015227675.2 mRatBN7.2",
+			"blast_title": "RGD GRCr8",
+			"seqid_prefix": "GRCr8",
+			"description": "RGD GCF_036323735.1 GRCr8",
+			"genome_browser": {
+				"assembly": "Rattus_norvegicus",
+				"ref_name": "accession",
+				"tracks": [
+					"Rattus_norvegicus_all_genes"
+				],
+				"type": "jbrowse2",
+				"url": "https://www.alliancegenome.org/jbrowse2/"
+			},
 			"genus": "Rattus",
-			"md5sum": "b60f66c61a72e92f3908cc7bcb852d6e",
+			"md5sum": "867657e8a3d3e96041acb7db822d09a2",
 			"seqtype": "nucl",
 			"species": "norvegicus",
 			"taxon_id": "NCBITaxon:10116",
@@ -141,26 +159,44 @@
 			"version": "production"
 		},
                 {
-			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/XENLA_9.2_genome.fa.gz",
+			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_017654675.1_Xenopus_laevis_v10.1_genomic.fna.gz",
 			"bioproject": "",
-			"blast_title": "X laevis. XENLA_9.2",
-			"seqid_prefix": "XENLA9.2",
-			"description": "X laevis. XENLA_9.2",
+			"blast_title": "X laevis XENLA_10.1",
+			"seqid_prefix": "XENLA10.1",
+			"description": "X laevis GCF_017654675.1 XENLA_10.1",
+			"genome_browser": {
+				"assembly": "Xenopus_laevis",
+				"ref_name": "accession",
+				"tracks": [
+					"Xenopus_laevis_all_genes"
+				],
+				"type": "jbrowse2",
+				"url": "https://www.alliancegenome.org/jbrowse2/"
+			},
 			"genus": "Xenopus",
-			"md5sum": "ef825d0b3289db3261bab1ebdd13a44b",
+			"md5sum": "fef63759b930226f814dbbe530f0fe0e",
 			"seqtype": "nucl",
 			"species": "laevis",
 			"taxon_id": "NCBITaxon:8355",
 			"version": "production"
 		},
                 {
-			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/XENTR_9.1_genome.fa.gz",
+			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_000004195.4_UCB_Xtro_10.0_genomic.fna.gz",
 			"bioproject": "",
-			"blast_title": "X tropicalis XENTR_9.1",
-			"seqid_prefix": "XENTR9.1",
-			"description": "X tropicalis XENTR_9.1",
+			"blast_title": "X tropicalis UCB_Xtro_10.0",
+			"seqid_prefix": "XENTR10.0",
+			"description": "X tropicalis GCF_000004195.4 UCB_Xtro_10.0",
+			"genome_browser": {
+				"assembly": "Xenopus_tropicalis",
+				"ref_name": "accession",
+				"tracks": [
+					"Xenopus_tropicalis_all_genes"
+				],
+				"type": "jbrowse2",
+				"url": "https://www.alliancegenome.org/jbrowse2/"
+			},
 			"genus": "Xenopus",
-			"md5sum": "b581410e1f11bd4ecd23299f62b1405b",
+			"md5sum": "3ee4685d08d8d0db6ebb90ade7224957",
 			"seqtype": "nucl",
 			"species": "tropicalis",
 			"taxon_id": "NCBITaxon:8364",
