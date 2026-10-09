@@ -201,6 +201,14 @@
                 "mod_gene_url": {
                     "type": "string"
                 },
+                "ref_name": {
+                    "title": "how a sequence id becomes a browser refName",
+                    "description": "Set to \"accession\" when the database's sequence ids are already the browser's refNames, which stops SequenceServer guessing a chromosome from the defline or the database path. Only value accepted so far.",
+                    "type": "string",
+                    "enum": [
+                        "accession"
+                    ]
+                },
                 "data_url": {
                     "type": "string",
                     "format": "uri",

@@ -58,6 +58,15 @@
 			"blast_title": "Mouse GRCm39",
 			"seqid_prefix": "GRCm39",
 			"description": "GCF_000001635.27_GRCm39",
+			"genome_browser": {
+				"assembly": "Mus_musculus",
+				"ref_name": "accession",
+				"tracks": [
+					"Mus_musculus_all_genes"
+				],
+				"type": "jbrowse2",
+				"url": "https://www.alliancegenome.org/jbrowse2/"
+			},
 			"genus": "Mus",
 			"md5sum": "9592cfe265714ec7a793865e8d241939",
 			"seqtype": "nucl",
@@ -71,6 +80,15 @@
 			"blast_title": "Human GRCh38",
 			"seqid_prefix": "GRCh38",
 			"description": "Human GCF_000001405.40 GRCh38",
+			"genome_browser": {
+				"assembly": "Homo_sapiens",
+				"ref_name": "accession",
+				"tracks": [
+					"Homo_sapiens_all_genes"
+				],
+				"type": "jbrowse2",
+				"url": "https://www.alliancegenome.org/jbrowse2/"
+			},
 			"genus": "Homo",
 			"md5sum": "5220bdf9707fb450450e9078965b8177",
 			"seqtype": "nucl",
@@ -84,6 +102,15 @@
 			"blast_title": "Fly Release_6_plus_ISO1_MT",
 			"seqid_prefix": "dmel6",
 			"description": "Fly GCF_000001215.4 Release_6_plus_ISO1_MT",
+			"genome_browser": {
+				"assembly": "Drosophila_melanogaster",
+				"ref_name": "accession",
+				"tracks": [
+					"Drosophila_melanogaster_all_genes"
+				],
+				"type": "jbrowse2",
+				"url": "https://www.alliancegenome.org/jbrowse2/"
+			},
 			"genus": "Drosophila",
 			"md5sum": "4739b1a44d6dfccb50ea4607b6cfe17c",
 			"seqtype": "nucl",
@@ -97,6 +124,15 @@
 			"blast_title": "Yeast R64",
 			"seqid_prefix": "R64",
 			"description": "Yeast GCF_000146045.2 R64",
+			"genome_browser": {
+				"assembly": "Saccharomyces_cerevisiae",
+				"ref_name": "accession",
+				"tracks": [
+					"Saccharomyces_cerevisiae_all_genes"
+				],
+				"type": "jbrowse2",
+				"url": "https://www.alliancegenome.org/jbrowse2/"
+			},
 			"genus": "Saccharomyces",
 			"md5sum": "e69d2e0eb1083656e38259f933be3ac0",
 			"seqtype": "nucl",
