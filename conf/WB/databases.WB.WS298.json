@@ -6,6 +6,7 @@
          "description" : "Panagrellus redivivus genome assembly",
          "genome_browser" : {
             "assembly" : "p_redivivus_PRJNA186477",
+				"ref_name": "accession",
             "data_url" : "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/WS298/p_redivivus_PRJNA186477/",
             "gene_track" : "Curated_Genes",
             "mod_gene_url" : "https://wormbase.org/species/p_redivivus/gene/",
@@ -441,6 +442,7 @@
          "description" : "Caenorhabditis inopinata genome assembly",
          "genome_browser" : {
             "assembly" : "c_inopinata_PRJDB5687",
+				"ref_name": "accession",
             "data_url" : "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/WS298/c_inopinata_PRJDB5687/",
             "gene_track" : "Curated_Genes",
             "mod_gene_url" : "https://wormbase.org/species/c_inopinata/gene/",
@@ -700,6 +702,7 @@
          "description" : "Oscheius tipulae genome assembly",
          "genome_browser" : {
             "assembly" : "o_tipulae_PRJEB15512",
+				"ref_name": "accession",
             "data_url" : "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/WS298/o_tipulae_PRJEB15512/",
             "gene_track" : "Curated_Genes",
             "mod_gene_url" : "https://wormbase.org/species/o_tipulae/gene/",
@@ -923,6 +926,7 @@
          "description" : "Caenorhabditis elegans VC2010 genome assembly",
          "genome_browser" : {
             "assembly" : "c_elegans_PRJEB28388",
+				"ref_name": "accession",
             "data_url" : "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/WS298/c_elegans_PRJEB28388/",
             "gene_track" : "Curated_Genes",
             "mod_gene_url" : "https://wormbase.org/species/c_elegans/gene/",
@@ -1034,6 +1038,7 @@
          "description" : "Caenorhabditis nigoni genome assembly",
          "genome_browser" : {
             "assembly" : "c_nigoni_PRJNA384657",
+				"ref_name": "accession",
             "data_url" : "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/WS298/c_nigoni_PRJNA384657/",
             "gene_track" : "Curated_Genes",
             "mod_gene_url" : "https://wormbase.org/species/c_nigoni/gene/",
@@ -1108,6 +1113,7 @@
          "description" : "Caenorhabditis latens genome assembly",
          "genome_browser" : {
             "assembly" : "c_latens_PRJNA248912",
+				"ref_name": "accession",
             "data_url" : "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/WS298/c_latens_PRJNA248912/",
             "gene_track" : "Curated_Genes",
             "mod_gene_url" : "https://wormbase.org/species/c_latens/gene/",
