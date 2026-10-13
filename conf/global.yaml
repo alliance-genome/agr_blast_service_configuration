@@ -12,7 +12,7 @@
 #   SGD      2025-10-03_combined  183 databases, release SGD:R64-5-1, -e R64-5-1m
 #   RGD      production_new         9 databases, -e 8.3.0
 #   ZFIN     production            13 configured, 7 built, -e prod
-#   ALLIANCE prod                   9 databases
+#   ALLIANCE 9.1.0                  9 databases, -e 9.1.0
 #   XB       5.5.1                  2 databases, nothing deployed
 #
 # Three things this list cannot express, so they are run with -j <file>:
@@ -29,6 +29,10 @@
 # Before this file was corrected on 2026-10-13 it pinned WB to WS291 and WS292
 # and SGD to 2024-06-13, none of which any instance serves, and it omitted RGD
 # and ZFIN, both of which are served.
+#
+# ALLIANCE is named by Alliance release from 9.1.0 onward, and gets a release
+# whenever the Alliance does, so the next one is a new config file and a new
+# environment here rather than an edit to this one.
 data_providers:
   - name: "WB"
     environments:
@@ -50,4 +54,4 @@ data_providers:
       - "5.5.1"
   - name: "ALLIANCE"
     environments:
-      - "prod"
+      - "9.1.0"

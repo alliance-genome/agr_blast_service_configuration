@@ -24,7 +24,7 @@
 			"species" : "elegans",
 			"taxon_id" : "NCBITaxon:6239",
 			"uri" : "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_000002985.6_WBcel235_genomic.fna.gz",
-			"version" : "WS292"
+			"version" : "9.1.0"
 		},
 		{
 			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_049306965.1_GRCz12tu_genomic.fna.gz",
@@ -46,7 +46,7 @@
 			"seqtype": "nucl",
 			"species": "rerio",
 			"taxon_id": "NCBITaxon:7955",
-			"version": "production"
+			"version": "9.1.0"
 		},
 	        {
 			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_036323735.1_GRCr8_genomic.fna.gz",
@@ -68,7 +68,7 @@
 			"seqtype": "nucl",
 			"species": "norvegicus",
 			"taxon_id": "NCBITaxon:10116",
-			"version": "production"
+			"version": "9.1.0"
 		},
 	        {
 			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_000001635.27_GRCm39_genomic.fna.gz",
@@ -90,7 +90,7 @@
 			"seqtype": "nucl",
 			"species": "musculus",
 			"taxon_id": "NCBITaxon:10090",
-			"version": "production"
+			"version": "9.1.0"
 		},
                 {
 			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_000001405.40_GRCh38.p14_genomic.fna.gz",
@@ -112,7 +112,7 @@
 			"seqtype": "nucl",
 			"species": "sapiens",
 			"taxon_id": "NCBITaxon:9606",
-			"version": "production"
+			"version": "9.1.0"
 		},
                 {
 			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz",
@@ -134,7 +134,7 @@
 			"seqtype": "nucl",
 			"species": "melanogaster",
 			"taxon_id": "NCBITaxon:7227",
-			"version": "production"
+			"version": "9.1.0"
 		},
                 {
 			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_000146045.2_R64_genomic.fna.gz",
@@ -156,7 +156,7 @@
 			"seqtype": "nucl",
 			"species": "cerevisiae",
 			"taxon_id": "NCBITaxon:4932",
-			"version": "production"
+			"version": "9.1.0"
 		},
                 {
 			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_017654675.1_Xenopus_laevis_v10.1_genomic.fna.gz",
@@ -178,7 +178,7 @@
 			"seqtype": "nucl",
 			"species": "laevis",
 			"taxon_id": "NCBITaxon:8355",
-			"version": "production"
+			"version": "9.1.0"
 		},
                 {
 			"uri": "https://s3.amazonaws.com/agrjbrowse/fasta/GCF_000004195.4_UCB_Xtro_10.0_genomic.fna.gz",
@@ -200,7 +200,7 @@
 			"seqtype": "nucl",
 			"species": "tropicalis",
 			"taxon_id": "NCBITaxon:8364",
-			"version": "production"
+			"version": "9.1.0"
 		}
 	],
 	"metadata" : {
@@ -209,7 +209,7 @@
 		"dateProduced" : "2026-10-05T00:00:00+00:00",
 		"homepage_url" : "https://alliancegenome.org",
 		"logo_url" : "https://www.alliancegenome.org/static/media/alliance_logo_agr.5d74de29913e6faf4e40.png",
-		"release" : "prod",
+		"release" : "9.1.0",
 		"public": false
 	}
 }
