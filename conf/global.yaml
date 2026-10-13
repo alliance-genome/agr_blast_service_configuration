@@ -1,14 +1,50 @@
+# Which config file to build for each provider, as
+# conf/<PROVIDER>/databases.<PROVIDER>.<environment>.json.
+#
+# Every entry below names the file that built the data a running instance
+# serves, matched by database count and by metadata.release rather than guessed
+# from the filename. The deployed directory name is the -e argument and is not
+# taken from here, which is why SGD's file is dated while the directory it
+# produced is called R64-5-1m.
+#
+#   WB       WS298                 63 databases, release WS298
+#   FB       FB2026_03            200 databases
+#   SGD      2025-10-03_combined  183 databases, release SGD:R64-5-1, -e R64-5-1m
+#   RGD      production_new         9 databases, -e 8.3.0
+#   ZFIN     production            13 configured, 7 built, -e prod
+#   ALLIANCE prod                   9 databases
+#   XB       5.5.1                  2 databases, nothing deployed
+#
+# Three things this list cannot express, so they are run with -j <file>:
+#
+#   * SGD's fungal deployment, 312 databases on SGD/R64-5-1f, whose configs are
+#     named databases.SGD_fungal.*.json. The provider token has to be a
+#     directory under conf/, and SGD_fungal is not one, so naming it here is
+#     impossible. The same goes for databases.SGD_test.* and
+#     databases.SGD_fungal_test.*.
+#   * Any release other than the one named per provider. conf/WB alone holds
+#     eleven, WS285 through WS298.
+#   * WB/dev, 61 databases from January 2024 with no config in this repo at all.
+#
+# Before this file was corrected on 2026-10-13 it pinned WB to WS291 and WS292
+# and SGD to 2024-06-13, none of which any instance serves, and it omitted RGD
+# and ZFIN, both of which are served.
 data_providers:
   - name: "WB"
     environments:
-      - "WS291"
-      - "WS292"
+      - "WS298"
   - name: "FB"
     environments:
       - "FB2026_03"
   - name: "SGD"
     environments:
-      - "2024-06-13"
+      - "2025-10-03_combined"
+  - name: "RGD"
+    environments:
+      - "production_new"
+  - name: "ZFIN"
+    environments:
+      - "production"
   - name: "XB"
     environments:
       - "5.5.1"
