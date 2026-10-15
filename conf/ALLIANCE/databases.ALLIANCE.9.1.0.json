@@ -210,6 +210,6 @@
 		"homepage_url" : "https://alliancegenome.org",
 		"logo_url" : "https://www.alliancegenome.org/static/media/alliance_logo_agr.5d74de29913e6faf4e40.png",
 		"release" : "9.1.0",
-		"public": false
+		"public": true
 	}
 }
