@@ -338,7 +338,15 @@ free text and is sanitised the same way as `blast_title`, so
 `databases.SGD_fungal_test.2025-10-11.json` (312).
 `bin/combine_sgd_config.py` is the script that produced them, by moving
 descriptive strings out of `genus`/`species` into `seqcol_type` and restoring
-real taxonomy. It is currently untracked.
+real taxonomy. Tracked as of 2026-10-16, and it reproduces
+`databases.SGD.2025-10-03_combined.json` from `databases.SGD_test.2025-10-03.json`
+byte for byte, all 183 entries.
+
+It refuses to run on a config that already carries `seqcol_type`, and that
+guard is load-bearing: the transform is not idempotent, because on a second
+pass every genus is already "Saccharomyces", the fallback branch fires, and
+all 183 `seqcol_type` values become "Saccharomyces|cerevisiae". That flattens
+the grouping the database tree is built from, silently, with a zero exit.
 
 `seqcol` — the second branch above — is dead. No config in this repository uses
 it, and because `schemas/metadata_schema.json:86` sets
@@ -634,13 +642,12 @@ prints the JSON pointer instead of the instance.
 
 ## Repository state to be aware of
 
-Four paths in the working tree are untracked and should not be committed
-casually: `CLAUDE.md`, `bin/combine_sgd_config.py` (the script that generated
-the three `seqcol_type` SGD configs, so worth tracking deliberately),
-`conf/WB/databases.WB.WS291_small.json`, and
-`conf/WB/.databases.WB.WS285.json.swp`, which is an abandoned Vim swap file and
-should be deleted rather than tracked. 35 of the 36 configs under `conf/` are
-tracked.
+Nothing in the working tree is untracked as of 2026-10-16, and all 35 configs
+under `conf/` are tracked. Four paths were, and each was resolved separately
+rather than swept in: `CLAUDE.md` and `bin/combine_sgd_config.py` were
+committed, `conf/WB/databases.WB.WS291_small.json` was dropped in #67 as an
+accident, and `conf/WB/.databases.WB.WS285.json.swp` was deleted in #65 as the
+abandoned Vim swap file it was.
 
 `agr_blastdb_manager` carries its own `conf/` directory with a 2022-era subset
 of these files — `global.yaml` (WB only, everything else commented out),
