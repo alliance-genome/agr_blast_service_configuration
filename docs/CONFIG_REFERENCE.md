@@ -82,7 +82,7 @@ Matching every deployed `environment.json` on this host against every config in
 
 | Deployed environment | Config it came from | Entries |
 |---|---|---|
-| `ALLIANCE/prod` | `conf/ALLIANCE/databases.ALLIANCE.prod.json` | 9 |
+| `ALLIANCE/9.1.0` | `conf/ALLIANCE/databases.ALLIANCE.9.1.0.json` | 9 |
 | `FB/FB2024_02` … `FB/FB2026_03` | the matching `conf/FB/databases.FB.<rel>.json` | 197–200 |
 | `FB/FB2025_03B` | identical to `FB2025_03`; no config of its own exists | 200 |
 | `RGD/8.3.0` | `conf/RGD/databases.RGD.production.json` | 2 |
@@ -251,9 +251,13 @@ build failure of 2024-10-09: entry 1, *C. elegans*, failed on
 3 and entries 3 through 9 failed in under two seconds each; the run reported
 `create_dbs function completed in 65.78 seconds` and exited 0. A year later the
 one database that existed was copied to production, and `environment.json` —
-the input config, all nine genomes — was published alongside it. `/blast/ALLIANCE/prod/`
-has declared nine genomes and served one ever since. The full account is
-`agr_blastdb_manager/docs/alliance_2024_build_failure.md`; the repair plan is
+the input config, all nine genomes — was published alongside it.
+`/blast/ALLIANCE/prod/` declared nine genomes and served one from then until
+2026-10-13. It now serves nine of nine at `/blast/ALLIANCE/9.1.0/`, and the
+manager refuses to publish `environment.json` when any entry fails, so the
+mechanism is shut as well as the instance. The full account is
+`agr_blastdb_manager/docs/alliance_2024_build_failure.md`, whose last section
+records what closed each cause; the plan is
 `agr_sequenceserver/docs/ALLIANCE_WIDE_PLAN.md`.
 
 Re-verified on 2026-09-30, eight of those nine checksums still match what Adam
@@ -390,7 +394,8 @@ have not confirmed what.
 
 Fill `metadata` in anyway, for the same reason as `description`: it is the
 record. But a wrong `release` or a missing `public: false` changes nothing that
-is served today.
+is served today. `conf/WB/databases.WB.WS292.json` is the only config carrying
+`public: false` since #68 set the ALLIANCE one true.
 
 Four WormBase configs spell the section `metaData` instead of `metadata`:
 `WS293`, `WS294`, `WS295` and `WS296`. `WS297` and `WS298` spell it correctly.
@@ -464,12 +469,16 @@ present, because feeding amino-acid offsets to a genomic track reports whatever
 gene happens to sit at that base pair (`hit.rb:130`). A link is also
 suppressed outright when no reference name can be extracted, including when the
 accession comes back as `gnl|BL_ORD_ID` (`links.rb:471`, `:563`) — which is the
-state ZFIN's GRCz11 database under `ALLIANCE/prod` is in, having been built
-without `-parse_seqids`.
+state ZFIN's own GRCz11 database is in, having been built without
+`-parse_seqids`. The Alliance copy was in that state too; it was rebuilt on
+GRCz12tu with `-parse_seqids` in 2026-10 and now carries `.nog` and `.nos`
+files, so the suppression no longer applies there.
 
-Of the 276 blocks in the repository, 272 are `jbrowse2` and 4 are `jbrowse`.
-All four JBrowse 1 blocks point at `https://jbrowse.yeastgenome.org/` and sit
-in SGD configs that are not deployed; no deployed environment uses JBrowse 1.
+Of the 283 blocks in the repository as of 2026-10-16, 279 are `jbrowse2` and
+4 are `jbrowse`. It was 276 and 272 before ALLIANCE 9.1.0's nine entries
+gained theirs. All four JBrowse 1 blocks point at
+`https://jbrowse.yeastgenome.org/` and sit in SGD configs that are not
+deployed; no deployed environment uses JBrowse 1.
 
 ## Validating before you commit
 
