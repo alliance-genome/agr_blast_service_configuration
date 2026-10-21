@@ -11,7 +11,7 @@
 #   FB       FB2026_03            200 databases
 #   SGD      2025-10-03_combined  183 databases, release SGD:R64-5-1, -e R64-5-1m
 #   RGD      production_new         9 databases, -e 8.3.0
-#   ZFIN     production            13 configured, 7 built, -e prod
+#   ZFIN     production            13 databases, -e prod
 #   ALLIANCE 9.1.0                  9 databases, -e 9.1.0
 #   XB       5.5.1                  2 databases, nothing deployed
 #
