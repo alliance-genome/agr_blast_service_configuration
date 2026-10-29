@@ -12,7 +12,7 @@
 #   SGD      2025-10-03_combined  183 databases, release SGD:R64-5-1, -e R64-5-1m
 #   RGD      production_new         9 databases, -e 8.3.0
 #   ZFIN     production            13 databases, -e prod
-#   ALLIANCE 9.1.0, 9.2.0           9 databases each, -e 9.1.0 / -e 9.2.0
+#   ALLIANCE 9.2.0                  9 databases, -e 9.2.0 (9.1.0 retired 2026-10-29)
 #   XB       5.5.1                  2 databases, nothing deployed
 #
 # Three things this list cannot express, so they are run with -j <file>:
@@ -54,5 +54,4 @@ data_providers:
       - "5.5.1"
   - name: "ALLIANCE"
     environments:
-      - "9.1.0"
       - "9.2.0"
