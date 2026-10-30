@@ -92,7 +92,7 @@ Matching every deployed `environment.json` on this host against every config in
 | `WB/WS293` … `WB/WS298` | the matching `conf/WB/databases.WB.<rel>.json` | 61–63 |
 | `WB/dev` | `conf/WB/databases.WB.WS291.json` | 61 |
 | `WB/prod` | `conf/WB/databases.WB.WS293.json` | 61 |
-| `ZFIN/prod`, `ZFIN/zfintest` | `conf/ZFIN/databases.ZFIN.production.json` | 13 |
+| `ZFIN/prod`, `ZFIN/zfintest` | `conf/ZFIN/databases.ZFIN.production.json` | 13, all 13 built and served since 2026-10-22 |
 
 Two of those rows are drift worth fixing rather than facts to work around.
 
@@ -172,23 +172,66 @@ only: the directory and the BLAST title keep the old spelling, the config
 carries the new one, the keys stop matching, and the affected databases lose
 their organism label with no error anywhere.
 
-Two titles that sanitise to the same string collide, and ZFIN has such a pair.
-`conf/ZFIN/databases.ZFIN.production.json` lists `ZFIN TALEN Sequences`
+Two titles that sanitise to the same string collide, and ZFIN had such a pair.
+`conf/ZFIN/databases.ZFIN.production.json` listed `ZFIN TALEN Sequences`
 twice, once for `talen_fasta.fa.gz` and once for `zfin_mrph.fa.gz`
-(morpholinos). Both resolve to the directory
-`Danio/rerio/ZFIN_TALEN_Sequences/`, and on this host that directory holds only
-`zfin_mrph.fa.*`. Nothing overwrote anything: the two entries derive different
-database file names, so both would have sat side by side in the shared
-directory under the same title. The TALEN database was never built, or did not
-survive. What the collision guarantees is the shared directory and the
-duplicate tree label — the morpholino database is served under the TALEN label.
-Nothing in the pipeline reports either the duplicate title or the missing
-database.
+(morpholinos). Both resolved to `Danio/rerio/ZFIN_TALEN_Sequences/`, and that
+directory held only `zfin_mrph.fa.*`, so the morpholino database was served
+under the TALEN label. `talen_fasta.fa.gz` 404s, which is why the TALEN
+database was never there. Nothing in the pipeline reported either the
+duplicate title or the missing database.
 
-ZFIN is short of databases for other reasons too: thirteen entries are
-declared, eight directories exist, one of them
-(`Published_Zebrafish_Proteins/`) is empty, and seven databases are actually
-served.
+Fixed in #71. The TALEN entry points at `zfin_talen.fa.gz`, which exists, and
+the morpholino entry is titled `ZFIN Morpholino Sequences`. The deployed
+databases now read `ZDB-TALEN-` and `ZDB-MRPHLNO-` deflines respectively. The
+output-path conflict check added in `agr_blastdb_manager` #77 refuses a config
+with such a pair before anything is downloaded.
+
+ZFIN was short of databases for other reasons too, and the largest was not the
+collision. Nine of its thirteen entries carried one md5sum,
+`120d600be831a50d460872eb6f5e4d7c`, across files from 15 KB to 313 MB. One
+checksum cannot match nine files, so those entries failed verification rather
+than building, and that is what `13 configured, 7 built` recorded. All thirteen
+checksums were wrong; #71 recomputed them, and 13 of 13 now verify against the
+live sources.
+
+### ZFIN publishes no protein FASTA
+
+ZFIN's own BLAST form offers two protein databases, `zfin_all_aa` ("Zebrafish
+Proteins") and `vegaprotein_zf` ("Vega Zebrafish Protein"), and offers
+`blastp`, `blastx` and `tblastn`. Neither has a downloadable file:
+`zfin_all_aa.fa.gz` and `vegaprotein_zf.fa.gz` 404, as do eight other
+spellings tried on 2026-10-30. They are libraries on ZFIN's own BLAST host.
+
+The one protein file ZFIN does publish, `publishedProtein.fa.gz`, is not on
+their form. It returns 200 and is 40 bytes: a gzip of an empty file, stamped
+2024-08-23. The config pointed at it while declaring `seqtype: nucl`, and #71
+dropped the entry, because no seqtype correction produces a database from an
+empty file.
+
+So `/blast/ZFIN/prod` offers `blastn` only, and that cannot be fixed from
+ZFIN's download area.
+
+**Candidate sources, measured 2026-10-30 and not adopted.** Awaiting a ZFIN
+decision, because either would serve a protein set ZFIN neither publishes nor
+curates:
+
+| source | records | gz | assembly |
+|---|---|---|---|
+| RefSeq `GCF_049306965.1_GRCz12tu_protein.faa.gz` | 89,827 | 20.9 MB | GRCz12tu |
+| Ensembl `Danio_rerio.GRCz11.pep.all.fa.gz` | 52,089 | 13.6 MB | GRCz11 |
+
+RefSeq is the better fit on one count that matters: its accession is the same
+assembly as the zebrafish genome already deployed in ZFIN and ALLIANCE 9.2.0,
+so a protein hit can be placed on a genome this host serves. Ensembl's current
+release is still GRCz11, a different assembly. Their deflines also differ in a
+way that changes linking: RefSeq gives `NP_001001398.2`, which
+`Links.ncbi_link` already turns into a `/protein/` link, while Ensembl gives
+`ENSDARP00000131158.1` with explicit GRCz11 coordinates.
+
+The Alliance publishes neither. The `agrjbrowse` bucket that serves our nine
+genomes holds no protein file under any name tried, and
+`fms.alliancegenome.org/download/SEQUENCE_PROTEIN_ZFIN.fa.gz` answers 500.
 
 ### uri
 
@@ -205,7 +248,7 @@ never unique:
 | Environment | Databases | Config entries matched per database |
 |---|---|---|
 | `SGD/R64-5-1f` | 312 | 1 for all 312 |
-| `ZFIN/prod` | 7 | 1 for all 7 |
+| `ZFIN/prod` | 13 | 1 for all 13 |
 | `FB/FB2026_03` | 200 | 3 for 195 of them, 1 for 5 |
 | `WB/WS298` | 63 | 2 for 54, 4 for 4, 5 for 5 |
 
